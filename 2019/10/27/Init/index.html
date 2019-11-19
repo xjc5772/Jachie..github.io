@@ -80,14 +80,14 @@ function activateLightMode(){
 <ol>
 <li>打开Git命令行(Git bash)运行一下命令——安装Hexo</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1. npm install -g hexo-cli</span><br><span class="line">2. npm i -g hexo</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">1. npm install -g hexo-cli</span><br><span class="line">2. npm i -g hexo</span><br></pre></td></tr></table></figure>
 
 <ol start="2">
 <li><p>初始化Hexo，在命令行（即<code>Git Bash</code>）依次运行以下命令即可：</p>
 <blockquote>
 <p>以下，<code>&lt;folder&gt;</code>即存放Hexo初始化文件的路径， 即站点目录</p>
 </blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ <span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ <span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
 
 </li>
 </ol>
@@ -109,7 +109,7 @@ function activateLightMode(){
 <ol start="3">
 <li>启动服务器。在路径下，命令行（即<code>Git Bash</code>）输入以下命令，运行即可：</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
 <ol start="4">
 <li>浏览器访问网址： <code>http://localhost:4000/</code></li>
@@ -247,15 +247,15 @@ function activateLightMode(){
 <ul>
 <li>接着在GitBash中，配置GitHub的账户信息（YourName和YourEmail换成GitHub的用户信息）</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"YourName"</span></span><br><span class="line">$ git config --global user.email <span class="string">"YourEmail"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"YourName"</span></span><br><span class="line">$ git config --global user.email <span class="string">"YourEmail"</span></span><br></pre></td></tr></table></figure>
 
 <p>若怕命令错处的话，可以键入命令键入下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config user.name</span><br><span class="line">$ git config user.email</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git config user.name</span><br><span class="line">$ git config user.email</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>创建SSH。生成SSH。然后按下图的方式找到<code>id_rsa.pub</code>，查看<code>id_rsa.pub</code>，获取SSH</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">"YourEmail"</span></span><br><span class="line">$ <span class="built_in">cd</span> ~/.ssh</span><br><span class="line">$ cat id_rsa.pub</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">"YourEmail"</span></span><br><span class="line">$ <span class="built_in">cd</span> ~/.ssh</span><br><span class="line">$ cat id_rsa.pub</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>配置SSH。将获取的SSH放到GitHub中</li>
@@ -301,14 +301,14 @@ function activateLightMode(){
 <ul>
 <li>安装<code>deploy-git</code>。安装部署命令，这样才能用命令部署到GitHub</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 
 
 
 <ul>
 <li>接着依次执行下列命令：</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo generate</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo generate</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>hexo clean清除了你之前生成的东西，也可以不加。</p>
