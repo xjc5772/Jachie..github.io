@@ -81,7 +81,7 @@ document.body.addEventListener('input', POWERMODE);
   return res.json();
 })
 .then(function (data) {
-  var sub = '共眠一舸听秋雨&#44;小簟轻衾各自寒,Sleep together and listen to the autumn rain'.length == 0  ? new Array() : '共眠一舸听秋雨&#44;小簟轻衾各自寒,Sleep together and listen to the autumn rain'.split(",");
+  var sub = '成都古寺卧秋晚&#44;落日偏傍僧窗明,Chengdu ancient temple lies in the late autumn with the setting sun leaning against the monk's window'.length == 0  ? new Array() : '成都古寺卧秋晚&#44;落日偏傍僧窗明,Chengdu ancient temple lies in the late autumn with the setting sun leaning against the monk's window'.split(",");
   var both = sub.unshift(data['ciba-en'],data.ciba)
   var typed = new Typed(".subtitle", {
   strings: sub,
