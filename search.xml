@@ -5,6 +5,35 @@
     
     <entry>
       <title>Butterfly更新部署</title>
+      <link href="/2019/11/26/%E5%BE%AE%E7%94%9F%E7%89%A9%E5%A2%9E%E6%AE%96%E9%97%AE%E9%A2%98/"/>
+      <url>/2019/11/26/%E5%BE%AE%E7%94%9F%E7%89%A9%E5%A2%9E%E6%AE%96%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="微生物增殖"><a href="#微生物增殖" class="headerlink" title="微生物增殖"></a>微生物增殖</h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote><p>假设有两种微生物 X 和 Y<br>X出生后每隔3分钟分裂一次（数目加倍），Y出生后每隔2分钟分裂一次（数目加倍）<br>一个新出生的X，半分钟之后吃掉1个Y，并且，从此开始，每隔1分钟吃1个Y。<br>现在已知有新出生的  X=10，Y=90，求60分钟后Y的数目。</p></blockquote><p>此处将<code>半分钟（0.5min）</code>转换成<code>一个0.5秒</code>。</p><p><code>一分钟</code>就是<code>2个0.5秒</code>，<code>二分钟</code>就是<code>4个0.5秒</code>，<code>三分钟</code>就是<code>6个0.5秒</code>，<code>60分钟</code>即为<code>120个0.5秒</code></p><table><thead><tr><th align="center">time</th><th align="center">m个0.5秒</th><th align="center">x</th><th align="center">y</th></tr></thead><tbody><tr><td align="center">0</td><td align="center">0</td><td align="center">10</td><td align="center">90</td></tr><tr><td align="center">0.5</td><td align="center">1</td><td align="center">10</td><td align="center">90-10=80</td></tr><tr><td align="center">1</td><td align="center">2</td><td align="center">10</td><td align="center">80</td></tr><tr><td align="center">1.5</td><td align="center">3</td><td align="center">10</td><td align="center">80-10=70</td></tr><tr><td align="center">2</td><td align="center">4</td><td align="center">10</td><td align="center">70*2=140</td></tr><tr><td align="center">2.5</td><td align="center">5</td><td align="center">10</td><td align="center">140-10=130</td></tr><tr><td align="center">3</td><td align="center">6</td><td align="center">10*2=20</td><td align="center">130</td></tr><tr><td align="center">3.5</td><td align="center">7</td><td align="center">20</td><td align="center">130-20=110</td></tr><tr><td align="center">4</td><td align="center">8</td><td align="center">20</td><td align="center">110*2=220</td></tr><tr><td align="center">……</td><td align="center">……</td><td align="center">……</td><td align="center">……</td></tr></tbody></table><p>此处即出现在</p><ul><li>2取余为1时，吃一次Y</li><li>4取余为0时，Y分裂一次</li><li>6取余为0时，X分裂一次</li></ul><blockquote><p>代码</p></blockquote><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="keyword">int</span> x=<span class="number">10</span>,y=<span class="number">90</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">120</span>;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(y&lt;=<span class="number">0</span>)&#123;<span class="comment">//如果y被吃完了，将不能再吃</span></span><br><span class="line">            y=<span class="number">0</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(i%<span class="number">2</span>==<span class="number">1</span>)<span class="comment">//y被吃条件</span></span><br><span class="line">            y-=x;</span><br><span class="line">        <span class="keyword">if</span>(i%<span class="number">4</span>==<span class="number">0</span>)<span class="comment">//y分裂条件</span></span><br><span class="line">            y*=<span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span>(i%<span class="number">6</span>==<span class="number">0</span>)<span class="comment">//x分裂条件</span></span><br><span class="line">            x*=<span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"60min后，y生物有%d个\n"</span>,y);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C/C++ </tag>
+            
+            <tag> 算法 </tag>
+            
+            <tag> 蓝桥杯 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Butterfly更新部署</title>
       <link href="/2019/11/19/Butterfly-Update/"/>
       <url>/2019/11/19/Butterfly-Update/</url>
       
