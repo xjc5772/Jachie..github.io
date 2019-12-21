@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>操作系统复习第二章</title>
+      <link href="/2019/12/21/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A002/"/>
+      <url>/2019/12/21/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A002/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="操作系统的硬件环境"><a href="#操作系统的硬件环境" class="headerlink" title="操作系统的硬件环境"></a><code>操作系统的硬件环境</code></h1><h1 id="处理机的基本构成"><a href="#处理机的基本构成" class="headerlink" title="处理机的基本构成"></a>处理机的基本构成</h1><blockquote><ul><li>运算器</li><li>控制器</li><li>寄存器</li><li>高速缓存</li></ul></blockquote><h1 id="处理机的状态"><a href="#处理机的状态" class="headerlink" title="处理机的状态"></a>处理机的状态</h1><blockquote><ul><li>管态(<code>特权态</code>、<code>系统态</code>)—指操作系统管理程序运行时的状态</li><li>目态(<code>普通态</code>、<code>用户态</code>)—指用户程序运行时的状态</li></ul></blockquote><h2 id="指令系统"><a href="#指令系统" class="headerlink" title="指令系统"></a>指令系统</h2><blockquote><ul><li>特权指令—<code>操作系统使用</code></li><li>非特权指令—<code>用户使用</code></li></ul></blockquote><h1 id="存储器类型"><a href="#存储器类型" class="headerlink" title="存储器类型"></a>存储器类型</h1><blockquote><ul><li>随机访问存储器——RAM</li><li>只读存储器——ROM<ul><li>可编程的只读存储器——PROM</li><li>电可编程只读存储器——EPROM</li><li>电可擦除存储器——EEPROM</li></ul></li></ul></blockquote><h1 id="存储器金字塔"><a href="#存储器金字塔" class="headerlink" title="存储器金字塔"></a>存储器金字塔</h1><blockquote><p>越往上速度越快</p></blockquote><p><img alt data-src="https://s2.ax1x.com/2019/12/21/Qva1aV.png" class="lazyload"></p><blockquote><p>Cache高速缓冲存储器</p><ul><li>L1—一级</li><li>L2—二级</li><li>L3—三级</li></ul></blockquote><h1 id="存储分块"><a href="#存储分块" class="headerlink" title="存储分块"></a>存储分块</h1><blockquote><p>存储最小单位称为<code>二进制位</code></p><p>1B=8b</p><p>1KB=1024B</p><p>1MB=1024KB</p><p>1GB=1024MB</p><p>1TB=1024GB</p><p>1字=2字节</p><p>4字节=1双字</p></blockquote><h1 id="中断处理"><a href="#中断处理" class="headerlink" title="中断处理"></a>中断处理</h1><h2 id="硬件中断"><a href="#硬件中断" class="headerlink" title="硬件中断"></a>硬件中断</h2><blockquote><ul><li><em>可屏蔽中断</em> </li><li><em>非可屏蔽中断</em> </li><li><em>处理器间中断</em> </li><li><em>伪中断</em> </li></ul></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 操作系统 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>操作系统复习第一章</title>
+      <link href="/2019/12/21/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A001/"/>
+      <url>/2019/12/21/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A001/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="操作系统的引论"><a href="#操作系统的引论" class="headerlink" title="操作系统的引论"></a><code>操作系统的引论</code></h1><h1 id="操作系统的定义"><a href="#操作系统的定义" class="headerlink" title="操作系统的定义"></a>操作系统的定义</h1><p>操作系统是计算机系统中的<code>系统软件</code>，是能够有效地<code>组织和管理</code>计算机系统中的<code>硬件</code>和<code>软件</code>资源，合理地组织<code>计算机工作流程</code>，控制程序的执行，并向用户提供各种<code>服务功能</code>，使得用户能够方便地使用计算机，使整个计算机系统能高效运行的一组程序模块的<code>集合</code></p><h1 id="操作系统的特点"><a href="#操作系统的特点" class="headerlink" title="操作系统的特点"></a>操作系统的特点</h1><blockquote><ul><li>有效</li><li>合理</li><li>方便</li></ul></blockquote><h1 id="操作系统的目标"><a href="#操作系统的目标" class="headerlink" title="操作系统的目标"></a>操作系统的目标</h1><blockquote><ul><li>方便性</li><li>有效性</li><li>可扩充性</li><li>开放性</li></ul></blockquote><h1 id="单道批处理操作系统的特征"><a href="#单道批处理操作系统的特征" class="headerlink" title="单道批处理操作系统的特征"></a>单道批处理操作系统的特征</h1><blockquote><ul><li>自动性</li><li>顺序性</li><li>单道性</li></ul></blockquote><blockquote><p>单道批处理系统是最早出现的一种操作系统</p></blockquote><h1 id="多道批处理操作系统好处"><a href="#多道批处理操作系统好处" class="headerlink" title="多道批处理操作系统好处"></a>多道批处理操作系统好处</h1><blockquote><ul><li>提高处理机的利用率</li><li>提高内存和I/O设备利用率</li><li>增加系统吞吐量</li></ul></blockquote><h1 id="多道批处理系统的特征"><a href="#多道批处理系统的特征" class="headerlink" title="多道批处理系统的特征"></a>多道批处理系统的特征</h1><blockquote><ul><li>多道性</li><li>无序性</li><li>调度性 <ul><li>作业调度</li><li>进程调度</li></ul></li></ul></blockquote><h1 id="多道批处理系统的优点-缺点"><a href="#多道批处理系统的优点-缺点" class="headerlink" title="多道批处理系统的优点/缺点"></a>多道批处理系统的优点/缺点</h1><h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a><code>优点</code></h2><blockquote><ul><li>资源利用率高</li><li>系统吞吐量大</li></ul></blockquote><h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a><code>缺点</code></h2><blockquote><ul><li>平均周转时间长</li><li>无交互能力</li></ul></blockquote><h1 id="分时系统的表现"><a href="#分时系统的表现" class="headerlink" title="分时系统的表现"></a>分时系统的表现</h1><blockquote><ul><li>人机交互</li><li>共享主机</li><li>便于用户上机</li></ul></blockquote><h1 id="分时系统的特征"><a href="#分时系统的特征" class="headerlink" title="分时系统的特征"></a>分时系统的特征</h1><blockquote><ul><li>多路性</li><li>独立性</li><li>及时性</li><li>交互性</li></ul></blockquote><h1 id="实时系统的表现"><a href="#实时系统的表现" class="headerlink" title="实时系统的表现"></a>实时系统的表现</h1><blockquote><ul><li>实时控制</li><li>实时信息处理</li></ul></blockquote><h1 id="实时系统的特征"><a href="#实时系统的特征" class="headerlink" title="实时系统的特征"></a>实时系统的特征</h1><blockquote><ul><li>多路性</li><li>独立性</li><li>及时性</li><li>交互性</li><li>可靠性</li></ul></blockquote><h1 id="网络操作系统"><a href="#网络操作系统" class="headerlink" title="网络操作系统"></a>网络操作系统</h1><h2 id="计算机网络的类型"><a href="#计算机网络的类型" class="headerlink" title="计算机网络的类型"></a>计算机网络的类型</h2><h3 id="网络拓扑结构分类"><a href="#网络拓扑结构分类" class="headerlink" title="网络拓扑结构分类"></a>网络拓扑结构分类</h3><blockquote><ul><li>星形网络</li><li>树形网络</li><li>总线型网络</li><li>环形网络</li><li>网状型网络</li></ul></blockquote><h3 id="网络地理范围分类"><a href="#网络地理范围分类" class="headerlink" title="网络地理范围分类"></a>网络地理范围分类</h3><blockquote><ul><li>WAN——广域网</li><li>LAN——局域网</li><li>MAN——城域网</li></ul></blockquote><h1 id="操作系统的功能"><a href="#操作系统的功能" class="headerlink" title="操作系统的功能"></a>操作系统的功能</h1><h2 id="处理机管理"><a href="#处理机管理" class="headerlink" title="处理机管理"></a>处理机管理</h2><blockquote><ul><li>进程控制<ul><li>创建进程</li><li>分配资源</li><li>撤销进程以及回收资源</li></ul></li><li>进程同步<ul><li>进程互斥方式</li><li>进程同步方式</li></ul></li><li>进程通信</li><li>进程调度</li></ul></blockquote><blockquote><p><code>作业调度&gt;&gt;写。进程调度&gt;&gt;读</code></p></blockquote><h2 id="存储器管理"><a href="#存储器管理" class="headerlink" title="存储器管理"></a>存储器管理</h2><blockquote><ul><li>内存分配<ul><li>静态分配—<code>内存空间装入时已经确定，无法申请新空间，也无法移动</code></li><li>动态分配—<code>内存空间装入时确定，但可额外申请附加空间，允许移动</code></li></ul></li><li>内存保护</li><li>地址映射</li><li>内存扩充</li></ul></blockquote><h2 id="文件管理"><a href="#文件管理" class="headerlink" title="文件管理"></a>文件管理</h2><h2 id="设备管理"><a href="#设备管理" class="headerlink" title="设备管理"></a>设备管理</h2><h2 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a>用户管理</h2><h1 id="操作系统的特征"><a href="#操作系统的特征" class="headerlink" title="操作系统的特征"></a>操作系统的特征</h1><blockquote><ul><li>并发</li><li>共享</li><li>虚拟</li><li>异步性</li></ul></blockquote><h1 id="练习题"><a href="#练习题" class="headerlink" title="练习题"></a>练习题</h1><ol><li>什么是操作系统？操作系统追求的主要目标是什么？</li></ol><blockquote><p>操作系统是计算机系统中的<code>系统软件</code>，是能够有效地组织和管理计算机系统中的<code>硬件</code>和<code>软件资源</code>，合理地组织计算机工作流程，控制程序的执行，并向用户<code>提供各种服务功能</code>，使得用户能够方便地使用计算机，是整个计算机系统能高效运行的<code>一组程序模块的集合</code>。</p><p>操作系统的目标是：方便性、有效性、可扩充性、开放性</p></blockquote><ol start="2"><li>在用户程序与计算机硬件之间，操作系统可以分为哪几个模块？</li></ol><blockquote><p>可分为系统软件、支撑软件、应用软件</p></blockquote><ol start="3"><li>操作系统分成哪几类？</li></ol><blockquote><p>分为批处理操作系统、分时系统、实时系统、网络操作系统</p></blockquote><ol start="4"><li>从资源管理观点看，操作系统具有哪些功能？</li></ol><blockquote><ul><li>处理机管理</li><li>存储器管理</li><li>文件管理</li><li>设备管理</li><li>用户接口</li></ul></blockquote><ol start="5"><li>什么是批处理系统？它可分为哪两种？</li></ol><blockquote><p>批处理系统就是可以成批处理一些程序的系统。</p><p>分为单道批处理和多道批处理</p></blockquote><ol start="6"><li>什么是多道程序系统？其主要特点是什么？</li></ol><blockquote><p>多道程序系统是控制多道程序同时运行的程序系统。</p><p>特点是：多道性、无序性、调度性</p></blockquote><ol start="7"><li>简述操作系统的特征</li></ol><blockquote><ul><li>有效</li><li>合理</li><li>方便</li></ul></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 操作系统 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>16进制转8进制问题</title>
       <link href="/2019/12/21/16%E8%BF%9B%E5%88%B6%E8%BD%AC8%E8%BF%9B%E5%88%B6%E9%97%AE%E9%A2%98/"/>
       <url>/2019/12/21/16%E8%BF%9B%E5%88%B6%E8%BD%AC8%E8%BF%9B%E5%88%B6%E9%97%AE%E9%A2%98/</url>
