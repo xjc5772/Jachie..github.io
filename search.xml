@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>操作系统复习第五章</title>
+      <link href="/2019/12/25/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A005/"/>
+      <url>/2019/12/25/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A005/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="存储器管理"><a href="#存储器管理" class="headerlink" title="存储器管理"></a><code>存储器管理</code></h1><h1 id="内存组成部分"><a href="#内存组成部分" class="headerlink" title="内存组成部分"></a>内存组成部分</h1><blockquote><ul><li>系统区</li><li>用户区</li></ul></blockquote><h1 id="存储管理的目的"><a href="#存储管理的目的" class="headerlink" title="存储管理的目的"></a>存储管理的目的</h1><p>存储管理要实现的目的是为用户提供方便、安全和充分大的存储空间</p><h1 id="存储管理的任务-功能"><a href="#存储管理的任务-功能" class="headerlink" title="存储管理的任务/功能"></a>存储管理的任务/功能</h1><blockquote><ul><li>地址转换<ul><li>逻辑地址</li><li>物理地址</li></ul></li><li>内存的分配和回收</li><li>内存的地址保护</li><li>内存的共享</li><li>内存的扩充</li></ul></blockquote><h1 id="存储管理方式的分类"><a href="#存储管理方式的分类" class="headerlink" title="存储管理方式的分类"></a>存储管理方式的分类</h1><p> <img alt="存储管理方式层次关系图" data-src="https://img-blog.csdnimg.cn/20191225165005995.png" class="lazyload"></p><h1 id="动态地址变换"><a href="#动态地址变换" class="headerlink" title="动态地址变换"></a>动态地址变换</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 操作系统 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>操作系统复习第四章</title>
       <link href="/2019/12/24/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A004/"/>
       <url>/2019/12/24/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A004/</url>
