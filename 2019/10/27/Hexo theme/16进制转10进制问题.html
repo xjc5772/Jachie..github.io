@@ -1,0 +1,99 @@
+<hr>
+<p>title: 16进制转10进制问题<br>date: 2020-01-15 14:05:32<br>categories: 算法<br>comments: true<br>tags:</p>
+<ul>
+<li>C/C++</li>
+<li>算法</li>
+<li>蓝桥杯<br>description: 从键盘输入一个不超过8位的正的十六进制数字符串，将它转换为正的十进制数后输出。<br>abbrlink: 46be9372<br>cover: <a href="https://gratisography.com/thumbnails/gratisography-441-thumbnail-small.jpg" target="_blank" rel="noopener">https://gratisography.com/thumbnails/gratisography-441-thumbnail-small.jpg</a><br>top_img: <a href="https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture" target="_blank" rel="noopener">https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture</a></li>
+</ul>
+<hr>
+<h1 id="16进制转换为10进制数"><a href="#16进制转换为10进制数" class="headerlink" title="16进制转换为10进制数"></a>16进制转换为10进制数</h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p><code>问题描述</code></p>
+<blockquote>
+<p>　从键盘输入一个不超过8位的正的十六进制数字符串，将它转换为正的十进制数后输出。<br>　注：十六进制数中的10~15分别用大写的英文字母A、B、C、D、E、F表示。</p>
+</blockquote>
+<p><code>样例输入</code></p>
+<p>FFFF</p>
+<p><code>样例输出</code></p>
+<p>65535</p>
+<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><blockquote>
+<p>首先得将16进制数转换为4位二进制数，装入到字符串中，再从字符串总从末尾开始，逐一将2进制转换为10进制数字。(<code>从末尾转换就不存在倒序转换问题</code>)，由于题目描述16进制数可能最大为8位，则需要考虑十进制数的大小问题，此处定义采用<code>long long</code>类型。</p>
+</blockquote>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><blockquote>
+<p><code>此处当初为了循环输入输出，所以定义了数组字符串，单个可以不用数组</code></p>
+</blockquote>
+<pre><code class="c++"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span>
+<span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span>
+<span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;  </span></span>
+<span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;  
+
+<span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span>  </span>
+<span class="function"></span>{  
+   <span class="keyword">int</span> n = <span class="number">1</span>, i = <span class="number">0</span>, j = <span class="number">0</span>, temp = <span class="number">0</span>;
+   <span class="keyword">long</span> <span class="keyword">long</span> nNum = <span class="number">0</span>;  
+   <span class="keyword">char</span> ch;  
+   <span class="built_in">string</span> strHex[<span class="number">10</span>];    <span class="comment">//16</span>
+   <span class="built_in">string</span> strBin[<span class="number">10</span>];   <span class="comment">//2</span>
+
+   <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n; i++)  
+   {  
+       <span class="built_in">cin</span>&gt;&gt;strHex[i];  
+   }  
+
+
+   <span class="comment">//十六进制转二进制  </span>
+   <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n; ++i)  
+   {  
+       j = <span class="number">0</span>;  
+       <span class="keyword">while</span> (strHex[i][j])  
+       {  
+           <span class="keyword">switch</span>(strHex[i][j])  
+           {  
+           <span class="keyword">case</span> <span class="string">'0'</span>: strBin[i] += <span class="string">"0000"</span>; <span class="keyword">break</span>;  
+           <span class="keyword">case</span> <span class="string">'1'</span>: strBin[i] += <span class="string">"0001"</span>; <span class="keyword">break</span>;  
+           <span class="keyword">case</span> <span class="string">'2'</span>: strBin[i] += <span class="string">"0010"</span>; <span class="keyword">break</span>;  
+           <span class="keyword">case</span> <span class="string">'3'</span>: strBin[i] += <span class="string">"0011"</span>; <span class="keyword">break</span>;  
+           <span class="keyword">case</span> <span class="string">'4'</span>: strBin[i] += <span class="string">"0100"</span>; <span class="keyword">break</span>;  
+           <span class="keyword">case</span> <span class="string">'5'</span>: strBin[i] += <span class="string">"0101"</span>; <span class="keyword">break</span>;  
+           <span class="keyword">case</span> <span class="string">'6'</span>: strBin[i] += <span class="string">"0110"</span>; <span class="keyword">break</span>;  
+           <span class="keyword">case</span> <span class="string">'7'</span>: strBin[i] += <span class="string">"0111"</span>; <span class="keyword">break</span>;  
+           <span class="keyword">case</span> <span class="string">'8'</span>: strBin[i] += <span class="string">"1000"</span>; <span class="keyword">break</span>;  
+           <span class="keyword">case</span> <span class="string">'9'</span>: strBin[i] += <span class="string">"1001"</span>; <span class="keyword">break</span>;  
+           <span class="keyword">case</span> <span class="string">'A'</span>: strBin[i] += <span class="string">"1010"</span>; <span class="keyword">break</span>;  
+           <span class="keyword">case</span> <span class="string">'B'</span>: strBin[i] += <span class="string">"1011"</span>; <span class="keyword">break</span>;  
+           <span class="keyword">case</span> <span class="string">'C'</span>: strBin[i] += <span class="string">"1100"</span>; <span class="keyword">break</span>;  
+           <span class="keyword">case</span> <span class="string">'D'</span>: strBin[i] += <span class="string">"1101"</span>; <span class="keyword">break</span>;  
+           <span class="keyword">case</span> <span class="string">'E'</span>: strBin[i] += <span class="string">"1110"</span>; <span class="keyword">break</span>;  
+           <span class="keyword">case</span> <span class="string">'F'</span>: strBin[i] += <span class="string">"1111"</span>; <span class="keyword">break</span>;  
+           <span class="keyword">default</span>:<span class="keyword">break</span>;  
+           }  
+           ++j;  
+       }  
+   }  
+
+   <span class="comment">//二进制转化为十进制  </span>
+   <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n; ++i)  
+   {  
+       j = strBin[i].size()<span class="number">-1</span>;<span class="comment">//获得长度  </span>
+       <span class="keyword">int</span> con=<span class="number">0</span>;
+       <span class="keyword">while</span> (strBin[i][j] &amp;&amp; j&gt;=<span class="number">0</span>)
+       {  
+               <span class="keyword">if</span>(strBin[i][j]==<span class="string">'1'</span>){
+                   nNum+=<span class="built_in">pow</span>(<span class="number">2</span>,con);<span class="comment">//2的con次方 </span>
+            }<span class="keyword">else</span>{
+            } 
+               --j;
+               con++; 
+       }  
+        <span class="built_in">cout</span>&lt;&lt;nNum&lt;&lt;<span class="built_in">endl</span>;
+   }  
+   <span class="keyword">return</span> <span class="number">0</span>;  
+}  </code></pre>
+<h2 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h2><pre><code class="bash">FFFACD
+16775885
+
+--------------------------------
+Process exited after 7.885 seconds with <span class="built_in">return</span> value 0
+请按任意键继续. . .
+</code></pre>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote>
+<p> 16进制数转10进制数，就按照正常流程，一个16进制数&gt;&gt;4位2进制数，接着从最末尾开始计算权值，累加得10进制数</p>
+</blockquote>

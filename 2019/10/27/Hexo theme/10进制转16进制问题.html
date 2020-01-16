@@ -1,0 +1,59 @@
+<hr>
+<p>title: 10进制转16进制问题<br>date: 2020-01-15 20:34:32<br>categories: 算法<br>comments: true<br>tags:</p>
+<ul>
+<li>C/C++</li>
+<li>算法</li>
+<li>蓝桥杯<br>description: 十六进制数是在程序设计时经常要使用到的一种整数的表示方式。它有0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F共16个符号，分别表示十进制数的0至15。十六进制的计数方法是满16进1，所以十进制数16在十六进制中是10，而十进制的17在十六进制中是11，以此类推，十进制的30在十六进制中是1E。给出一个非负整数，将它表示成十六进制的形式。<br>abbrlink: 46be9372<br>cover: <a href="https://gratisography.com/thumbnails/gratisography-311-thumbnail-small.jpg" target="_blank" rel="noopener">https://gratisography.com/thumbnails/gratisography-311-thumbnail-small.jpg</a><br>top_img: <a href="https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture" target="_blank" rel="noopener">https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture</a></li>
+</ul>
+<hr>
+<h1 id="10进制转换为16进制数"><a href="#10进制转换为16进制数" class="headerlink" title="10进制转换为16进制数"></a>10进制转换为16进制数</h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
+<p>​        十六进制数是在程序设计时经常要使用到的一种整数的表示方式。它有0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F共16个符号，分别表示十进制数的0至15。十六进制的计数方法是满16进1，所以十进制数16在十六进制中是10，而十进制的17在十六进制中是11，以此类推，十进制的30在十六进制中是1E。<br>　　给出一个非负整数，将它表示成十六进制的形式。</p>
+<p><code>输入格式</code></p>
+<p>　　输入包含一个非负整数a，表示要转换的数。0&lt;=a&lt;=2147483647</p>
+<p><code>输出格式</code></p>
+<p>　　输出这个整数的16进制表示</p>
+</blockquote>
+<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><blockquote>
+<p> 首先考虑数字的长度，其次是对10进制数的求商以及取余运算，并进行字符串拼接</p>
+</blockquote>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><pre><code class="c++"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span>
+<span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt; </span></span>
+<span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;  
+<span class="meta">#<span class="meta-keyword">define</span> N 16</span>
+
+<span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span>  </span>
+<span class="function"></span>{  
+  <span class="keyword">long</span> a;
+  <span class="keyword">int</span> n=<span class="number">0</span>;
+  <span class="built_in">string</span> strHex;
+  <span class="built_in">string</span> str;
+  <span class="built_in">cin</span>&gt;&gt;a;
+  <span class="keyword">if</span>(a==<span class="number">0</span>){
+    <span class="built_in">cout</span>&lt;&lt;<span class="number">0</span>;
+    <span class="keyword">return</span> <span class="number">0</span>;
+  }<span class="keyword">else</span>{
+      <span class="keyword">while</span>(a&gt;<span class="number">0</span>){
+              n=a%N;  <span class="comment">//取余</span>
+              <span class="keyword">if</span>(n&gt;=<span class="number">10</span>)
+                  strHex=<span class="keyword">char</span>(<span class="string">'A'</span><span class="number">-10</span>+n)+strHex;
+              <span class="keyword">else</span>{
+                  strHex=<span class="keyword">char</span>(<span class="string">'0'</span>+n)+strHex;
+            }     
+            a=a/N;
+          }
+          <span class="built_in">cout</span>&lt;&lt;strHex;
+          <span class="keyword">return</span> <span class="number">0</span>;
+      }
+}  </code></pre>
+<h2 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h2><pre><code class="bash">4551140
+4571E4
+--------------------------------
+Process exited after 2.647 seconds with <span class="built_in">return</span> value 0
+请按任意键继续. . .
+</code></pre>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote>
+<p>一个初始判断，作为如果10进制数0，转换的时候是个特殊情况，需要加以处理，其次对转换后的数字或者字母有一个合理的正确的顺序拼接</p>
+<p><code>≥10的数字：char(&#39;A&#39;-10+n)</code></p>
+<p><code>&lt;10的数字：char(&#39;0&#39;+n)</code></p>
+</blockquote>
