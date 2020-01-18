@@ -4,13 +4,85 @@
   
     
     <entry>
-      <title>hexo/Deploy-Coding</title>
-      <link href="/2020-01/17/hexo/Deploy-Coding/"/>
-      <url>/2020-01/17/hexo/Deploy-Coding/</url>
+      <title>字母图形</title>
+      <link href="/2020-01/18/%E7%AE%97%E6%B3%95/%E5%AD%97%E6%AF%8D%E5%9B%BE%E5%BD%A2/"/>
+      <url>/2020-01/18/%E7%AE%97%E6%B3%95/%E5%AD%97%E6%AF%8D%E5%9B%BE%E5%BD%A2/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="将博客部署到Coding"><a href="#将博客部署到Coding" class="headerlink" title="将博客部署到Coding"></a>将博客部署到Coding</h1><p>登录注册就不一一说明了，直接上设置</p><h2 id="查找电脑的SSH"><a href="#查找电脑的SSH" class="headerlink" title="查找电脑的SSH"></a>查找电脑的<code>SSH</code></h2><p>打开如下电脑 C 盘用户下的 <code>.ssh</code> 目录，找到<code>id_rsa.pub</code>，复制里面所有内容</p><p><img alt data-src="https://ftp.bmp.ovh/imgs/2020/01/da7c5e6905336187.png" class="lazyload"></p><h2 id="首先进入个人设置"><a href="#首先进入个人设置" class="headerlink" title="首先进入个人设置"></a>首先进入<code>个人设置</code></h2><p><img alt data-src="https://ftp.bmp.ovh/imgs/2020/01/aeb5a3f80284200f.png" class="lazyload"></p><h2 id="配置SSH"><a href="#配置SSH" class="headerlink" title="配置SSH"></a>配置SSH</h2><p><code>配置SSH公钥</code></p><p><img alt data-src="https://ftp.bmp.ovh/imgs/2020/01/e4c41bf4ea3205ed.png" class="lazyload"></p><p><code>新增SSH</code></p><p><img alt data-src="https://s2.ax1x.com/2020/01/17/lxrvfU.png" class="lazyload"></p><h2 id="测试配置"><a href="#测试配置" class="headerlink" title="测试配置"></a>测试配置</h2><blockquote><p>测试 SSH 公钥是否添加成功：本地打开 Git Bash 窗口，输入一下命令：</p><p><code>ssh -T git@coding.net</code></p></blockquote><p>若出现这种情况</p><blockquote><p><code>ssh: connect to host coding.net port 22: Connection refused</code></p><p>如图：</p><p><img alt="lxsMnA.png" data-src="https://s2.ax1x.com/2020/01/17/lxsMnA.png" class="lazyload"></p></blockquote><p>说明防火墙完全屏蔽了端口 22 ，这时候不要慌张，直接输入如下命令使用 Coding 提供的 443 端口 SSH 服务即可解决：</p><blockquote><p><code>ssh -T -p 443 git@git-ssh.coding.net</code></p></blockquote><p>接着会显示是否继续，选择 yes 继续，如果提示下列内容成功，即 SSH 公钥配置成功：</p><p><img alt="lxs07q.png" data-src="https://s2.ax1x.com/2020/01/17/lxs07q.png" class="lazyload"></p><h2 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h2><p>新建项目，填写项目信息。</p><p>建立完成后，打开</p><h2 id="配置博客主文件"><a href="#配置博客主文件" class="headerlink" title="配置博客主文件"></a>配置博客主文件</h2><p>打开 Hexo 博客主配置文件 <code>_config.yml</code>，找到 <code>deploy</code> 属性，作如下配置：</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">    type: git</span><br><span class="line">    repository:</span><br><span class="line">      github: git@github.com:xjc5772/xjc5772.github.io.git</span><br><span class="line">      coding: git@e.coding.net:jachie/XJC_Blog.git</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="字母图形问题"><a href="#字母图形问题" class="headerlink" title="字母图形问题"></a>字母图形问题</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><blockquote><p><code>问题描述</code></p><p>利用字母可以组成一些美丽的图形，下面给出了一个例子：</p><p>ABCDEFG</p><p>BABCDEF</p><p>CBABCDE</p><p>DCBABCD</p><p>EDCBABC</p><p>这是一个5行7列的图形，请找出这个图形的规律，并输出一个n行m列的图形。</p><p><code>输入格式</code></p><p>输入一行，包含两个整数n和m，分别表示你要输出的图形的行数的列数。</p><p><code>输出格式</code></p><p>输出n行，每个m个字符，为你的图形。</p><p><code>样例输入</code></p><p>5 7</p><p><code>样例输出</code></p><p>ABCDEFG<br>BABCDEF<br>CBABCDE<br>DCBABCD<br>EDCBABC</p><p><code>数据规模与约定</code></p><p>1 &lt;= n, m &lt;= 26。</p></blockquote><h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><blockquote><p>此处每一行往下可以看出从字母开始倒序到<code>字母A</code>，接着再重新开始计算，可以发现字母的序号与两个坐标的差的绝对值有关。那么可以试着从横纵坐标入手去确定每个位置的字母</p></blockquote><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;  </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">int</span> n,m;<span class="comment">//行与列</span></span><br><span class="line"><span class="keyword">char</span> FBI=<span class="string">'A'</span>;</span><br><span class="line"><span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m;</span><br><span class="line"><span class="keyword">char</span> a[n][m];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;++i)&#123;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;m;j++)&#123;</span><br><span class="line">a[i][j]=(FBI+<span class="built_in">abs</span>(i-j));<span class="comment">//求绝对值 </span></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;m;j++)&#123;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;a[i][j];</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">5 7</span><br><span class="line">ABCDEFG</span><br><span class="line">BABCDEF</span><br><span class="line">CBABCDE</span><br><span class="line">DCBABCD</span><br><span class="line">EDCBABC</span><br><span class="line"></span><br><span class="line">--------------------------------</span><br><span class="line">Process exited after 2.77 seconds with <span class="built_in">return</span> value 0</span><br><span class="line">请按任意键继续. . .</span><br></pre></td></tr></table></figure><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote><p>用两重循环来枚举所有的坐标，使用绝对值函数计算出坐标的差，再输出对应的字符。此处有一个函数<code>abs()</code>，计算整数的绝对值，那么计算浮点数的绝对值采用<code>fabs()</code>。</p></blockquote>]]></content>
       
       
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C/C++ </tag>
+            
+            <tag> 算法 </tag>
+            
+            <tag> 蓝桥杯 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数列特征</title>
+      <link href="/2020-01/18/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%88%97%E7%89%B9%E5%BE%81/"/>
+      <url>/2020-01/18/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%88%97%E7%89%B9%E5%BE%81/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="数列特征"><a href="#数列特征" class="headerlink" title="数列特征"></a>数列特征</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><blockquote><p><code>问题描述</code></p><p>给出n个数，找出这n个数的最大值，最小值，和。</p><p><code>输入格式</code></p><p>第一行为整数n，表示数的个数。</p><p>第二行有n个数，为给定的n个数，每个数的绝对值都小于10000。</p><p><code>输出格式</code></p><p>输出三行，每行一个整数。第一行表示这些数中的最大值，第二行表示这些数中的最小值，第三行表示这些数的和。</p><p><code>样例输入</code></p><p>5<br>1 3 -2 4 5</p><p><code>样例输出</code></p><p>5<br>-2<br>11</p><p><code>数据规模与约定</code></p><p>1 &lt;= n &lt;= 10000。</p></blockquote><h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><blockquote><p>数列首先采用一个数组来存取。其次需要循环遍历每个数，找出最大与最小数，并在遍历过程中累加每一个数</p></blockquote><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;  </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">int</span> n;<span class="comment">//数的个数</span></span><br><span class="line"><span class="built_in">cin</span>&gt;&gt;n; </span><br><span class="line"><span class="keyword">int</span> a[n];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line"><span class="built_in">cin</span>&gt;&gt;a[i];</span><br><span class="line"><span class="keyword">int</span> max=a[<span class="number">0</span>],min=a[<span class="number">0</span>],sum=a[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;n;j++)&#123;</span><br><span class="line"><span class="keyword">if</span>(max&lt;a[j])</span><br><span class="line">max=a[j];</span><br><span class="line"><span class="keyword">if</span>(min&gt;a[j])</span><br><span class="line">min=a[j];</span><br><span class="line">sum+=a[j];</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;max&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;min&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;sum&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">4</span><br><span class="line">5 -5 1 6</span><br><span class="line">6</span><br><span class="line">-5</span><br><span class="line">7</span><br><span class="line"></span><br><span class="line">--------------------------------</span><br><span class="line">Process exited after 8.22 seconds with <span class="built_in">return</span> value 0</span><br><span class="line">请按任意键继续. . .</span><br></pre></td></tr></table></figure><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote><p>不知道为什么，初始值给<code>max</code>、<code>min</code>、<code>sum</code>为0，从a[0]开始的时候，评测没有完全通过，于是当数组赋值完以后，将首位元素赋值给<code>max</code>、<code>min</code>、<code>sum</code>，重新跑了一次，就可以了，有点迷。其他还好，就一个循环遍历，与找最大最小的结合。</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C/C++ </tag>
+            
+            <tag> 算法 </tag>
+            
+            <tag> 蓝桥杯 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>博客部署到Coding</title>
+      <link href="/2020-01/18/hexo/Deploy-Coding/"/>
+      <url>/2020-01/18/hexo/Deploy-Coding/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="将博客部署到Coding"><a href="#将博客部署到Coding" class="headerlink" title="将博客部署到Coding"></a>将博客部署到Coding</h1><p>登录注册就不一一说明了，直接上设置</p><h2 id="查找电脑的SSH"><a href="#查找电脑的SSH" class="headerlink" title="查找电脑的SSH"></a>查找电脑的<code>SSH</code></h2><p>打开如下电脑 C 盘用户下的 <code>.ssh</code> 目录，找到<code>id_rsa.pub</code>，复制里面所有内容</p><p><img alt data-src="https://ftp.bmp.ovh/imgs/2020/01/da7c5e6905336187.png" class="lazyload"></p><h2 id="首先进入个人设置"><a href="#首先进入个人设置" class="headerlink" title="首先进入个人设置"></a>首先进入<code>个人设置</code></h2><p><img alt data-src="https://ftp.bmp.ovh/imgs/2020/01/aeb5a3f80284200f.png" class="lazyload"></p><h2 id="配置SSH"><a href="#配置SSH" class="headerlink" title="配置SSH"></a>配置SSH</h2><p><code>配置SSH公钥</code></p><p><img alt data-src="https://ftp.bmp.ovh/imgs/2020/01/e4c41bf4ea3205ed.png" class="lazyload"></p><p><code>新增SSH</code></p><p><img alt data-src="https://s2.ax1x.com/2020/01/17/lxrvfU.png" class="lazyload"></p><h2 id="测试配置"><a href="#测试配置" class="headerlink" title="测试配置"></a>测试配置</h2><blockquote><p>测试 SSH 公钥是否添加成功：本地打开 Git Bash 窗口，输入一下命令：</p><p><code>ssh -T git@coding.net</code></p></blockquote><p>若出现这种情况</p><blockquote><p><code>ssh: connect to host coding.net port 22: Connection refused</code></p><p>如图：</p><p><img alt="lxsMnA.png" data-src="https://s2.ax1x.com/2020/01/17/lxsMnA.png" class="lazyload"></p></blockquote><p>说明防火墙完全屏蔽了端口 22 ，这时候不要慌张，直接输入如下命令使用 Coding 提供的 443 端口 SSH 服务即可解决：</p><blockquote><p><code>ssh -T -p 443 git@git-ssh.coding.net</code></p></blockquote><p>接着会显示是否继续，选择 yes 继续，如果提示下列内容成功，即 SSH 公钥配置成功：</p><p><img alt="lxs07q.png" data-src="https://s2.ax1x.com/2020/01/17/lxs07q.png" class="lazyload"></p><h2 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h2><p>新建项目，填写项目信息。</p><p>建立完成后，打开</p><h2 id="配置博客主文件"><a href="#配置博客主文件" class="headerlink" title="配置博客主文件"></a>配置博客主文件</h2><p>打开 Hexo 博客主配置文件 <code>_config.yml</code>，找到 <code>deploy</code> 属性，作如下配置：</p><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">    type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">    repository:</span></span><br><span class="line"><span class="attr">      github:</span> <span class="string">git@github.com:xjc5772/xjc5772.github.io.git</span></span><br><span class="line"><span class="attr">      coding:</span> <span class="string">git@e.coding.net:jachie/XJC_Blog.git</span></span><br><span class="line"><span class="attr">    branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure><p>打开 Hexo 主目录下的 <code>source</code> 文件，新建文件 <code>Staticfile</code> ，这个文件是 Coding 静态文件部署的标志，注意文件名字必须为 <code>Staticfile</code>，否则 Coding 上无法完成静态文件的部署，如下图所示：</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> Coding </tag>
+            
+        </tags>
       
     </entry>
     
@@ -78,35 +150,6 @@
       <title>特殊的数字</title>
       <link href="/2020-01/16/%E7%AE%97%E6%B3%95/%E7%89%B9%E6%AE%8A%E7%9A%84%E6%95%B0%E5%AD%97/"/>
       <url>/2020-01/16/%E7%AE%97%E6%B3%95/%E7%89%B9%E6%AE%8A%E7%9A%84%E6%95%B0%E5%AD%97/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="特殊的数字"><a href="#特殊的数字" class="headerlink" title="特殊的数字"></a>特殊的数字</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><blockquote><p><code>问题描述</code></p><p>　　153是一个非常特殊的数，它等于它的每位数字的立方和，即153=1×1×1+5×5×5+3×3×3。编程求所有满足这种条件的三位十进制数。</p><p><code>输出格式</code></p><p>　　按从小到大的顺序输出满足条件的三位十进制数，每个数占一行。</p></blockquote><h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><blockquote><p>首先范围确定，是<code>3位</code>十进制数，其次，是循环遍历输出</p></blockquote><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;  </span><br><span class="line"><span class="comment">// 153是一个非常特殊的数，它等于它的每位数字的立方和，</span></span><br><span class="line"><span class="comment">// 即153=1*1*1+5*5*5+3*3*3。编程求所有满足这种条件的三位十进制数。</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">int</span> g,s,b;</span><br><span class="line"></span><br><span class="line"><span class="comment">//3位数字</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">100</span>;j&lt;<span class="number">1000</span>;j++)&#123;</span><br><span class="line">g=j%<span class="number">10</span>;</span><br><span class="line">s=j/<span class="number">10</span>%<span class="number">10</span>;</span><br><span class="line">b=j/<span class="number">100</span>;</span><br><span class="line"><span class="keyword">if</span>(<span class="built_in">pow</span>(g,<span class="number">3</span>)+<span class="built_in">pow</span>(s,<span class="number">3</span>)+<span class="built_in">pow</span>(b,<span class="number">3</span>)==j)<span class="comment">// 第1位等于第4位，第2位等于第3位</span></span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;j&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">153</span><br><span class="line">370</span><br><span class="line">371</span><br><span class="line">407</span><br><span class="line"></span><br><span class="line">--------------------------------</span><br><span class="line">Process exited after 1.84 seconds with <span class="built_in">return</span> value 0</span><br><span class="line">请按任意键继续. . .</span><br></pre></td></tr></table></figure><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote><p>主要是将数字逐个拆分，然后利用<code>pow()</code>函数求立方，得满足三个数的立方和等于原数。</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> 算法 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> C/C++ </tag>
-            
-            <tag> 算法 </tag>
-            
-            <tag> 蓝桥杯 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>特殊的数字</title>
-      <link href="/2020-01/16/%E7%89%B9%E6%AE%8A%E7%9A%84%E6%95%B0%E5%AD%97/"/>
-      <url>/2020-01/16/%E7%89%B9%E6%AE%8A%E7%9A%84%E6%95%B0%E5%AD%97/</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="特殊的数字"><a href="#特殊的数字" class="headerlink" title="特殊的数字"></a>特殊的数字</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><blockquote><p><code>问题描述</code></p><p>　　153是一个非常特殊的数，它等于它的每位数字的立方和，即153=1×1×1+5×5×5+3×3×3。编程求所有满足这种条件的三位十进制数。</p><p><code>输出格式</code></p><p>　　按从小到大的顺序输出满足条件的三位十进制数，每个数占一行。</p></blockquote><h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><blockquote><p>首先范围确定，是<code>3位</code>十进制数，其次，是循环遍历输出</p></blockquote><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;  </span><br><span class="line"><span class="comment">// 153是一个非常特殊的数，它等于它的每位数字的立方和，</span></span><br><span class="line"><span class="comment">// 即153=1*1*1+5*5*5+3*3*3。编程求所有满足这种条件的三位十进制数。</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">int</span> g,s,b;</span><br><span class="line"></span><br><span class="line"><span class="comment">//3位数字</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">100</span>;j&lt;<span class="number">1000</span>;j++)&#123;</span><br><span class="line">g=j%<span class="number">10</span>;</span><br><span class="line">s=j/<span class="number">10</span>%<span class="number">10</span>;</span><br><span class="line">b=j/<span class="number">100</span>;</span><br><span class="line"><span class="keyword">if</span>(<span class="built_in">pow</span>(g,<span class="number">3</span>)+<span class="built_in">pow</span>(s,<span class="number">3</span>)+<span class="built_in">pow</span>(b,<span class="number">3</span>)==j)<span class="comment">// 第1位等于第4位，第2位等于第3位</span></span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;j&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">153</span><br><span class="line">370</span><br><span class="line">371</span><br><span class="line">407</span><br><span class="line"></span><br><span class="line">--------------------------------</span><br><span class="line">Process exited after 1.84 seconds with <span class="built_in">return</span> value 0</span><br><span class="line">请按任意键继续. . .</span><br></pre></td></tr></table></figure><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote><p>主要是将数字逐个拆分，然后利用<code>pow()</code>函数求立方，得满足三个数的立方和等于原数。</p></blockquote>]]></content>
       
@@ -221,8 +264,8 @@
     
     <entry>
       <title>小寒初逢寒</title>
-      <link href="/2020-01/06/%E5%B0%8F%E5%AF%92%E6%9C%AA%E5%88%9D%E9%80%A2%E5%AF%92/"/>
-      <url>/2020-01/06/%E5%B0%8F%E5%AF%92%E6%9C%AA%E5%88%9D%E9%80%A2%E5%AF%92/</url>
+      <link href="/2020-01/06/%E7%94%9F%E6%B4%BB/%E5%B0%8F%E5%AF%92%E6%9C%AA%E5%88%9D%E9%80%A2%E5%AF%92/"/>
+      <url>/2020-01/06/%E7%94%9F%E6%B4%BB/%E5%B0%8F%E5%AF%92%E6%9C%AA%E5%88%9D%E9%80%A2%E5%AF%92/</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
       
