@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>01字符串</title>
+      <link href="/2020-01/19/%E7%AE%97%E6%B3%95/01%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+      <url>/2020-01/19/%E7%AE%97%E6%B3%95/01%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="01字符串"><a href="#01字符串" class="headerlink" title="01字符串"></a>01字符串</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><blockquote><p><code>问题描述</code></p><p>对于长度为5位的一个01串，每一位都可能是0或1，一共有32种可能。它们的前几个是：</p><p>00000</p><p>00001</p><p>00010</p><p>00011</p><p>00100</p><p>请按从小到大的顺序输出这32种01串。</p><p><code>输入格式</code></p><p>本试题没有输入。</p><p><code>输出格式</code></p><p>输出32行，按从小到大的顺序每行一个长度为5的01串。</p><p><code>样例输出</code></p><p>00000<br>00001<br>00010<br>00011<br>&lt;以下部分省略&gt;</p></blockquote><h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><blockquote><p>就是将0-32以五位二进制数的形式输出，可以试着采用拼接形式</p></blockquote><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;  </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"> <span class="keyword">for</span>(<span class="keyword">int</span> a = <span class="number">0</span>; a &lt; <span class="number">2</span>; a++) &#123;</span><br><span class="line">   <span class="keyword">for</span>(<span class="keyword">int</span> b = <span class="number">0</span>; b &lt; <span class="number">2</span>; b++) &#123;</span><br><span class="line">   <span class="keyword">for</span>(<span class="keyword">int</span> c = <span class="number">0</span>; c &lt; <span class="number">2</span>; c++) &#123;</span><br><span class="line">   <span class="keyword">for</span>(<span class="keyword">int</span> d = <span class="number">0</span>; d &lt; <span class="number">2</span>; d++) &#123;</span><br><span class="line">   <span class="keyword">for</span>(<span class="keyword">int</span> e = <span class="number">0</span>; e &lt; <span class="number">2</span>; e++) &#123;</span><br><span class="line">   <span class="built_in">cout</span>&lt;&lt;a&lt;&lt;b&lt;&lt;c&lt;&lt;d&lt;&lt;e&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">   &#125;</span><br><span class="line">   &#125;</span><br><span class="line">   &#125;</span><br><span class="line">   &#125;</span><br><span class="line">   &#125;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">00000</span><br><span class="line">00001</span><br><span class="line">00010</span><br><span class="line">00011</span><br><span class="line">00100</span><br><span class="line">00101</span><br><span class="line">00110</span><br><span class="line">00111</span><br><span class="line">01000</span><br><span class="line">01001</span><br><span class="line">01010</span><br><span class="line">01011</span><br><span class="line">01100</span><br><span class="line">01101</span><br><span class="line">01110</span><br><span class="line">01111</span><br><span class="line">10000</span><br><span class="line">10001</span><br><span class="line">10010</span><br><span class="line">10011</span><br><span class="line">10100</span><br><span class="line">10101</span><br><span class="line">10110</span><br><span class="line">10111</span><br><span class="line">11000</span><br><span class="line">11001</span><br><span class="line">11010</span><br><span class="line">11011</span><br><span class="line">11100</span><br><span class="line">11101</span><br><span class="line">11110</span><br><span class="line">11111</span><br><span class="line"></span><br><span class="line">--------------------------------</span><br><span class="line">Process exited after 2.333 seconds with <span class="built_in">return</span> value 0</span><br><span class="line">请按任意键继续. . .</span><br></pre></td></tr></table></figure><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote><p>采用五重循环，最外面一层循环枚举最左边一位，第二层循环枚举左边第二位，依次类推，第五层循环枚举最低位。</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C/C++ </tag>
+            
+            <tag> 算法 </tag>
+            
+            <tag> 蓝桥杯 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>字母图形</title>
       <link href="/2020-01/18/%E7%AE%97%E6%B3%95/%E5%AD%97%E6%AF%8D%E5%9B%BE%E5%BD%A2/"/>
       <url>/2020-01/18/%E7%AE%97%E6%B3%95/%E5%AD%97%E6%AF%8D%E5%9B%BE%E5%BD%A2/</url>
