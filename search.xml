@@ -4,9 +4,133 @@
   
     
     <entry>
+      <title>距离问题</title>
+      <link href="/2020-01/20/%E7%AE%97%E6%B3%95/%E8%B7%9D%E7%A6%BB%E9%97%AE%E9%A2%98/"/>
+      <url>/2020-01/20/%E7%AE%97%E6%B3%95/%E8%B7%9D%E7%A6%BB%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="距离问题"><a href="#距离问题" class="headerlink" title="距离问题"></a>距离问题</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><blockquote><p>两辆汽车在同一地点，同时，沿同一方向前进。</p><p>一辆车的速度为60 km/h，另一辆车的速度为90 km/h。</p><p>显然，快车与慢车的距离会不断拉开，每过一个小时（60分钟），两车的距离就拉开30公里。</p><p>现在，告诉你两车之间的距离为L公里，请你求出两车已经行驶了多长时间？</p><h4 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h4><p>输入包含一个整数L，表示两车之间的距离。</p><h4 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h4><p>输出格式为“X minutos”，其中X为已经行驶的时间，单位为分钟。</p><h4 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h4><p>1≤L≤1091≤L≤109</p><h4 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h4><p>30</p><h4 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h4><p>60 minutos</p></blockquote><h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><blockquote><p>将常用的数学计算，用代码实现。</p><p>A车 <code>60 km/h</code></p><p>B车 <code>90 km/h</code></p><p>同时从</p></blockquote><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><h2 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h2><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C/C++ </tag>
+            
+            <tag> 算法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>冒泡排序</title>
+      <link href="/2020-01/20/%E5%AD%A6%E4%B9%A0/%E6%8E%92%E5%BA%8F%E4%B9%8B%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/"/>
+      <url>/2020-01/20/%E5%AD%A6%E4%B9%A0/%E6%8E%92%E5%BA%8F%E4%B9%8B%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h1><h2 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C/C++ </tag>
+            
+            <tag> 算法 </tag>
+            
+            <tag> 蓝桥杯 </tag>
+            
+            <tag> 排序 </tag>
+            
+            <tag> 数组 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>景点游览</title>
+      <link href="/2020-01/20/%E7%AE%97%E6%B3%95/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%88%9D%E7%BA%A7%E8%AE%AD%E7%BB%83/%E6%99%AF%E7%82%B9%E6%B8%B8%E8%A7%88/"/>
+      <url>/2020-01/20/%E7%AE%97%E6%B3%95/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%88%9D%E7%BA%A7%E8%AE%AD%E7%BB%83/%E6%99%AF%E7%82%B9%E6%B8%B8%E8%A7%88/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="景点游览"><a href="#景点游览" class="headerlink" title="景点游览"></a>景点游览</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><blockquote><p><code>问题描述</code></p><p>　　小明来到一个景区游玩，但是他的时间有限，没办法逛遍所有的景点，所以他从网上下载了每个景点的评分，他希望能够使游览的景点的评分总和最高，于是他希望你帮他对于N个景点排下序。</p><p><code>输入格式</code></p><p>　　输入的第一行包含一个正整数N，表示N个景点。<br>　　第二行有N个正整数，表示每个景点的评分值。</p><p><code>输出格式</code></p><p>　　输出一行，包含N个正整数，表示N个景点的评分从大到小的排列</p><p><code>样例输入</code></p><p>4<br>3 2 4 1</p><p><code>样例输出</code></p><p>4 3 2 1</p><p><code>数据规模和约定</code></p><p>　　N&lt;=1000,每个景点的评分&lt;=10000。</p></blockquote><h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><blockquote><p>对数字使用数组进行存储，考虑到数组长度的定义。典型的排序问题，采取排序方式不同，程序的复杂度也将不一样</p></blockquote><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;  </span><br><span class="line"></span><br><span class="line"><span class="comment">//冒泡排序 </span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">MP</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> N)</span></span>&#123;</span><br><span class="line"><span class="keyword">int</span> temp;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N<span class="number">-1</span>;i++)&#123;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;N<span class="number">-1</span>-i;j++)&#123;</span><br><span class="line"><span class="keyword">if</span>(a[j]&lt;a[j+<span class="number">1</span>])&#123;</span><br><span class="line">temp=a[j];</span><br><span class="line">a[j]=a[j+<span class="number">1</span>];</span><br><span class="line">a[j+<span class="number">1</span>]=temp;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">int</span> N;</span><br><span class="line"><span class="built_in">cin</span>&gt;&gt;N;<span class="comment">//多少个数字</span></span><br><span class="line"><span class="keyword">int</span> a[N];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N;i++)</span><br><span class="line"><span class="built_in">cin</span>&gt;&gt;a[i];</span><br><span class="line">MP(a,N);</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;N;j++)</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;a[j]&lt;&lt;<span class="string">" "</span>;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">4</span><br><span class="line">3 2 4 1</span><br><span class="line">4 3 2 1</span><br><span class="line">--------------------------------</span><br><span class="line">Process exited after 15.77 seconds with <span class="built_in">return</span> value 0</span><br><span class="line">请按任意键继续. . .</span><br></pre></td></tr></table></figure><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote><p>对于排序有很多种方式：</p><ul><li>插入排序<ul><li>直接插入排序</li><li>希尔排序</li></ul></li><li>选择排序<ul><li>简单选择排序</li><li>堆排序</li></ul></li><li>交换排序<ul><li><a href>冒泡排序</a></li><li><a href>快速排序</a></li></ul></li></ul></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C/C++ </tag>
+            
+            <tag> 算法 </tag>
+            
+            <tag> 蓝桥杯 </tag>
+            
+            <tag> 排序 </tag>
+            
+            <tag> 数组 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>加法运算</title>
+      <link href="/2020-01/20/%E7%AE%97%E6%B3%95/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%88%9D%E7%BA%A7%E8%AE%AD%E7%BB%83/%E5%8A%A0%E6%B3%95%E8%BF%90%E7%AE%97/"/>
+      <url>/2020-01/20/%E7%AE%97%E6%B3%95/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%88%9D%E7%BA%A7%E8%AE%AD%E7%BB%83/%E5%8A%A0%E6%B3%95%E8%BF%90%E7%AE%97/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="加法运算"><a href="#加法运算" class="headerlink" title="加法运算"></a>加法运算</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><blockquote><p><code>问题描述</code><br>　　你的表妹正在学习整数的加法，请编写一个程序来帮助她学习。该程序调用了一个函数GetTwoInts，由它来返回两个从键盘读入的100以内的整数，然后计算这两个整数之和，并把答案显示出来。要求：在主函数中不能使用scanf等函数直接输入这两个整数，而必须通过调用GetTwoInts函数来完成，在GetTwoInts函数中可以使用scanf函数。<br>　　输入格式：输入只有一行，即两个100以内的整数。<br>　　输出格式：输出只有一行，即这两个整数之和。<br><strong>输入输出样例</strong></p><p><code>样例输入</code></p><p>4 7</p><p><code>样例输出</code></p><p>11</p></blockquote><h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><blockquote><p>由于该函数必须同时返回两个整数，因此不能采用函数返回值的方式，而必须采用指针的方法来实现。通过指针指引形式，为变量赋值。</p></blockquote><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;  </span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">GetTwoInts</span><span class="params">(<span class="keyword">int</span> *x,<span class="keyword">int</span> *y)</span></span>&#123;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d %d"</span>,x,y);</span><br><span class="line"><span class="comment">//此处与以往不同，是为其对应的地址赋值</span></span><br><span class="line"><span class="comment">//普通为变量赋值采用scanf("%d %d",&amp;x,&amp;y);形式 </span></span><br><span class="line"><span class="comment">//而此处传入的即为地址 </span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> x,y; </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">int</span> x,y;</span><br><span class="line">GetTwoInts(&amp;x,&amp;y);</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;x+y;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">4 1</span><br><span class="line">5</span><br><span class="line">--------------------------------</span><br><span class="line">Process exited after 5.957 seconds with <span class="built_in">return</span> value 0</span><br><span class="line">请按任意键继续. . .</span><br></pre></td></tr></table></figure><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote><p>通过自定义函数为变量赋值，可以考虑到函数赋值后，采用函数返回值形式返回变量值，而此处含有多个变量，不可以同时返回多个变量，那么采用指针形式，找到其变量地址，对其修改值</p><p>一般变量赋值为：</p><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> x,y;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d %d"</span>,&amp;x,&amp;y);</span><br></pre></td></tr></table></figure><p>使用指针赋值：</p><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> x,y;</span><br><span class="line"><span class="keyword">int</span> *xx=&amp;x,*yy=&amp;y;<span class="comment">//将x,y的地址同时赋值给*xx,*yy两个指针</span></span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d %d"</span>,xx,yy);<span class="comment">//再对两个指针所对应的地址赋值，即可实现对x,y同时赋值</span></span><br></pre></td></tr></table></figure></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C/C++ </tag>
+            
+            <tag> 算法 </tag>
+            
+            <tag> 蓝桥杯 </tag>
+            
+            <tag> 指针 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>C++语法学习02</title>
-      <link href="/2020-01/19/%E5%AD%A6%E4%B9%A0/C++%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A002/"/>
-      <url>/2020-01/19/%E5%AD%A6%E4%B9%A0/C++%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A002/</url>
+      <link href="/2020-01/19/%E5%AD%A6%E4%B9%A0/C++study02/"/>
+      <url>/2020-01/19/%E5%AD%A6%E4%B9%A0/C++study02/</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
       
@@ -51,6 +175,8 @@
             
             <tag> 蓝桥杯 </tag>
             
+            <tag> 条件判断 </tag>
+            
         </tags>
       
     </entry>
@@ -59,8 +185,8 @@
     
     <entry>
       <title>数据交换</title>
-      <link href="/2020-01/19/%E7%AE%97%E6%B3%95/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%88%9D%E7%BA%A7%E8%AE%AD%E7%BB%83/%E4%BA%A4%E6%8D%A2%E6%95%B0%E6%8D%AE/"/>
-      <url>/2020-01/19/%E7%AE%97%E6%B3%95/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%88%9D%E7%BA%A7%E8%AE%AD%E7%BB%83/%E4%BA%A4%E6%8D%A2%E6%95%B0%E6%8D%AE/</url>
+      <link href="/2020-01/19/%E7%AE%97%E6%B3%95/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%88%9D%E7%BA%A7%E8%AE%AD%E7%BB%83/%E6%95%B0%E6%8D%AE%E4%BA%A4%E6%8D%A2/"/>
+      <url>/2020-01/19/%E7%AE%97%E6%B3%95/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%88%9D%E7%BA%A7%E8%AE%AD%E7%BB%83/%E6%95%B0%E6%8D%AE%E4%BA%A4%E6%8D%A2/</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="数据交换"><a href="#数据交换" class="headerlink" title="数据交换"></a>数据交换</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><blockquote><p><code>问题描述</code><br>　　编写一个程序，输入两个整数，分别存放在变量x和y当中，然后使用自己定义的函数swap来交换这两个变量的值。<br>　　输入格式：输入只有一行，包括两个整数。<br>　　输出格式：输出只有一行，也是两个整数，即交换以后的结果。<br>　　要求：主函数负责数据的输入与输出，但不能直接交换这两个变量的值，必须通过调用单独定义的函数swap来完成，而swap函数只负责交换变量的值，不能输出交换后的结果。<br><code>输入输出样例</code></p><p><code>样例输入</code></p><p>4 7</p><p><code>样例输出</code></p><p>7 4</p></blockquote><h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><p><code>指针方式实现</code></p><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;  </span><br><span class="line"><span class="comment">//通过指针完成 </span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> *x,<span class="keyword">int</span> *y)</span></span>&#123;</span><br><span class="line"><span class="keyword">int</span> temp=*x;</span><br><span class="line">*x=*y;</span><br><span class="line">*y=temp;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> x,y;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="built_in">cin</span>&gt;&gt;x&gt;&gt;y;</span><br><span class="line">swap(x,y);</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;x&lt;&lt;<span class="string">" "</span>&lt;&lt;y;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><code>地址引用方式实现</code></p><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;  </span><br><span class="line"><span class="comment">//地址引用方式</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> &amp;x,<span class="keyword">int</span> &amp;y)</span></span>&#123;</span><br><span class="line"><span class="keyword">int</span> temp=x;</span><br><span class="line">x=y;</span><br><span class="line">y=temp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> x,y; </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="built_in">cin</span>&gt;&gt;x&gt;&gt;y;</span><br><span class="line">swap(x,y);</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;x&lt;&lt;<span class="string">" "</span>&lt;&lt;y;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">5 4</span><br><span class="line">4 5</span><br><span class="line">--------------------------------</span><br><span class="line">Process exited after 2.646 seconds with <span class="built_in">return</span> value 0</span><br><span class="line">请按任意键继续. . .</span><br></pre></td></tr></table></figure><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote><p>数据的交换，就是值的交换，本题要求通过自定义函数，不可以在主函数直接交换两个函数的值，那么采用取指针形式或者交换引用地址形式，做到两个变量值的交换与改变</p></blockquote>]]></content>
       
@@ -79,6 +205,8 @@
             <tag> 算法 </tag>
             
             <tag> 蓝桥杯 </tag>
+            
+            <tag> swap </tag>
             
         </tags>
       
@@ -109,6 +237,8 @@
             
             <tag> 蓝桥杯 </tag>
             
+            <tag> 循环 </tag>
+            
         </tags>
       
     </entry>
@@ -137,6 +267,10 @@
             <tag> 算法 </tag>
             
             <tag> 蓝桥杯 </tag>
+            
+            <tag> 循环 </tag>
+            
+            <tag> 字符串 </tag>
             
         </tags>
       
@@ -194,6 +328,8 @@
             
             <tag> 蓝桥杯 </tag>
             
+            <tag> 循环 </tag>
+            
         </tags>
       
     </entry>
@@ -222,6 +358,10 @@
             <tag> 算法 </tag>
             
             <tag> 蓝桥杯 </tag>
+            
+            <tag> 循环 </tag>
+            
+            <tag> 条件判断 </tag>
             
         </tags>
       
@@ -252,6 +392,8 @@
             
             <tag> 蓝桥杯 </tag>
             
+            <tag> 二维数组 </tag>
+            
         </tags>
       
     </entry>
@@ -280,6 +422,8 @@
             <tag> 算法 </tag>
             
             <tag> 蓝桥杯 </tag>
+            
+            <tag> 循环 </tag>
             
         </tags>
       
@@ -310,6 +454,10 @@
             
             <tag> 蓝桥杯 </tag>
             
+            <tag> 循环 </tag>
+            
+            <tag> 条件判断 </tag>
+            
         </tags>
       
     </entry>
@@ -339,6 +487,10 @@
             
             <tag> 蓝桥杯 </tag>
             
+            <tag> 循环 </tag>
+            
+            <tag> 条件判断 </tag>
+            
         </tags>
       
     </entry>
@@ -367,6 +519,12 @@
             <tag> 算法 </tag>
             
             <tag> 蓝桥杯 </tag>
+            
+            <tag> 条件判断 </tag>
+            
+            <tag> 进制转换 </tag>
+            
+            <tag> 字符处理 </tag>
             
         </tags>
       
@@ -599,6 +757,12 @@
             
             <tag> 蓝桥杯 </tag>
             
+            <tag> 循环 </tag>
+            
+            <tag> 进制转换 </tag>
+            
+            <tag> 字符处理 </tag>
+            
         </tags>
       
     </entry>
@@ -627,6 +791,8 @@
             <tag> 算法 </tag>
             
             <tag> 蓝桥杯 </tag>
+            
+            <tag> 求和 </tag>
             
         </tags>
       
@@ -680,7 +846,11 @@
             
             <tag> 算法 </tag>
             
-            <tag> 蓝桥杯 </tag>
+            <tag> 数组 </tag>
+            
+            <tag> 循环 </tag>
+            
+            <tag> swap </tag>
             
         </tags>
       
@@ -709,7 +879,11 @@
             
             <tag> 算法 </tag>
             
-            <tag> 蓝桥杯 </tag>
+            <tag> 数组 </tag>
+            
+            <tag> 循环 </tag>
+            
+            <tag> 字符串 </tag>
             
         </tags>
       
@@ -737,8 +911,6 @@
             <tag> C/C++ </tag>
             
             <tag> 算法 </tag>
-            
-            <tag> 蓝桥杯 </tag>
             
         </tags>
       
@@ -769,6 +941,8 @@
             
             <tag> 蓝桥杯 </tag>
             
+            <tag> 数列 </tag>
+            
         </tags>
       
     </entry>
@@ -797,6 +971,8 @@
             <tag> 算法 </tag>
             
             <tag> 蓝桥杯 </tag>
+            
+            <tag> 数列 </tag>
             
         </tags>
       
@@ -879,6 +1055,8 @@
             
             <tag> 蓝桥杯 </tag>
             
+            <tag> 循环 </tag>
+            
         </tags>
       
     </entry>
@@ -934,6 +1112,8 @@
             <tag> 算法 </tag>
             
             <tag> 蓝桥杯 </tag>
+            
+            <tag> 条件判断 </tag>
             
         </tags>
       
