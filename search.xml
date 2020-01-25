@@ -4,6 +4,62 @@
   
     
     <entry>
+      <title>一元二次方程公式</title>
+      <link href="/2020-01/25/%E7%AE%97%E6%B3%95/%E4%B8%80%E5%85%83%E4%BA%8C%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%85%AC%E5%BC%8F/"/>
+      <url>/2020-01/25/%E7%AE%97%E6%B3%95/%E4%B8%80%E5%85%83%E4%BA%8C%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%85%AC%E5%BC%8F/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="一元二次方程公式"><a href="#一元二次方程公式" class="headerlink" title="一元二次方程公式"></a>一元二次方程公式</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><blockquote><p>读取三个浮点数a,b,c的值，利用一元二次方程求根公式对方程$ax^2+bx+c=0$进行求解。</p><p>一元二次方程求根公式为：</p><script type="math/tex; mode=display">x=\frac {-b\pm \sqrt{b^2-4ac}}{2a}</script><p>如果$b^2−4ac&lt;0$导致方程无解或$a=0$，则输出“<code>Impossivel calcular</code>”。</p><h4 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h4><p>输入三个浮点数a,b,c。</p><h4 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h4><p>参照输出格式，输出方程的根，输出结果保留五位小数，如果无解则输出“Impossivel calcular”。<br>两个根可以按任意顺序输出，都算正确。</p><p>数据保证不存在只有一个解的情况。</p><h4 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h4><p>$−1000.0≤a,b,c≤1000.0$</p><h4 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">10.0 20.1 5.1</span><br></pre></td></tr></table></figure><h4 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">R1 = -0.29788</span><br><span class="line">R2 = -1.71212</span><br></pre></td></tr></table></figure></blockquote><h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><blockquote><p>对于本题的需要采取条件判断，对于满足不同情况进行不同的输出，本题可以用到数学函数帮助解题。</p></blockquote><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;  </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">double</span> a,b,c;</span><br><span class="line"><span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b&gt;&gt;c;</span><br><span class="line"><span class="keyword">double</span> m=<span class="built_in">pow</span>(b,<span class="number">2</span>)<span class="number">-4</span>*a*c;</span><br><span class="line"><span class="keyword">if</span>(m&lt;<span class="number">0</span>||a==<span class="number">0</span>)</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="string">"Impossivel calcular"</span>;</span><br><span class="line"><span class="keyword">else</span>&#123;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;fixed&lt;&lt;setprecision(<span class="number">5</span>)&lt;&lt;<span class="string">"R1 = "</span>&lt;&lt;(-b+<span class="built_in">sqrt</span>(m))/(<span class="number">2</span>*a)&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;fixed&lt;&lt;setprecision(<span class="number">5</span>)&lt;&lt;<span class="string">"R2 = "</span>&lt;&lt;(-b-<span class="built_in">sqrt</span>(m))/(<span class="number">2</span>*a)&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">10.0 30.1 5.6</span><br><span class="line">R1 = -0.19923</span><br><span class="line">R2 = -2.81077</span><br></pre></td></tr></table></figure><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote><p>本题进行了求平方根<code>sqrt()</code>与求平方<code>pow()</code>，并进行了数据精度的控制。</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C/C++ </tag>
+            
+            <tag> 算法 </tag>
+            
+            <tag> 条件判断 </tag>
+            
+            <tag> I/O </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C++中常用的数学函数</title>
+      <link href="/2020-01/25/%E5%AD%A6%E4%B9%A0/C++%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E6%95%B0%E5%AD%A6%E5%87%BD%E6%95%B0/"/>
+      <url>/2020-01/25/%E5%AD%A6%E4%B9%A0/C++%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E6%95%B0%E5%AD%A6%E5%87%BD%E6%95%B0/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="C-中常用的数学函数"><a href="#C-中常用的数学函数" class="headerlink" title="C++中常用的数学函数"></a>C++中常用的数学函数</h1><blockquote><p>C++中，数学函数是函数的一种。指专门进行数学运算的函数，一般都在头文件下。头文件定义为<code>#include&lt;math.h&gt;</code></p></blockquote><h2 id="abs"><a href="#abs" class="headerlink" title="abs( )"></a>abs( )</h2><blockquote><p><code>int abs(int i);</code> 求整数的绝对值。</p><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="string">"-53的绝对值是:"</span>&lt;&lt;<span class="built_in">abs</span>(<span class="number">-53</span>);</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">-53的绝对值是:53</span><br></pre></td></tr></table></figure></blockquote><h2 id="labs"><a href="#labs" class="headerlink" title="labs( )"></a>labs( )</h2><blockquote><p><code>long labs(long n);</code> 求长整型数的绝对值。</p><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="string">"-123456789的绝对值是："</span>&lt;&lt;<span class="built_in">labs</span>(<span class="number">-123456789</span>);</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">-123456789的绝对值是：123456789</span><br></pre></td></tr></table></figure></blockquote><h2 id="fabs"><a href="#fabs" class="headerlink" title="fabs( )"></a>fabs( )</h2><blockquote><p><code>double fabs(double x);</code> 求实数的绝对值。</p><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="string">"-54.29的绝对值是："</span>&lt;&lt;<span class="built_in">fabs</span>(<span class="number">-54.29</span>);</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">-54.29的绝对值是：54.29</span><br></pre></td></tr></table></figure></blockquote><h2 id="floor"><a href="#floor" class="headerlink" title="floor( )"></a>floor( )</h2><blockquote><p><code>double floor(double x);</code> 求不大于x的最大整数，它相当于数学函数[x]。</p><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="string">"51.12的向下取整是:"</span>&lt;&lt;<span class="built_in">floor</span>(<span class="number">51.12</span>)&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="string">"26.81的向下取整是:"</span>&lt;&lt;<span class="built_in">floor</span>(<span class="number">26.81</span>)&lt;&lt;<span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">51.12的向下取整是:51</span><br><span class="line">26.81的向下取整是:26</span><br></pre></td></tr></table></figure></blockquote><h2 id="ceil"><a href="#ceil" class="headerlink" title="ceil( )"></a>ceil( )</h2><blockquote><p><code>double ceil(double x);</code>求不小于x的最小整数。</p><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="string">"不小于45.06的最小整数:"</span>&lt;&lt;<span class="built_in">ceil</span>(<span class="number">45.06</span>);</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">不小于45.06的最小整数:46</span><br></pre></td></tr></table></figure></blockquote><h2 id="sqrt"><a href="#sqrt" class="headerlink" title="sqrt( )"></a>sqrt( )</h2><blockquote><p><code>double sqrt(double x);</code> 求x的平方根</p><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="string">"9的平方根是:"</span>&lt;&lt;<span class="built_in">sqrt</span>(<span class="number">9</span>);</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">9的平方根是:3</span><br></pre></td></tr></table></figure></blockquote><h2 id="log10"><a href="#log10" class="headerlink" title="log10( )"></a>log10( )</h2><blockquote><p><code>double log10(double x);</code> 求x的常用对数（10为底）</p><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="string">"100以10为底的对数为:"</span>&lt;&lt;<span class="built_in">log10</span>(<span class="number">100</span>);</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">100以10为底的对数为:2</span><br></pre></td></tr></table></figure></blockquote><h2 id="log"><a href="#log" class="headerlink" title="log( )"></a>log( )</h2><blockquote><p><code>double log(double x);</code>求x的自然对数（e为底）</p><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cout</span>&lt;&lt;fixed&lt;&lt;setprecision(<span class="number">7</span>)&lt;&lt;<span class="string">"以4.8134的平方为底的对数为:"</span>&lt;&lt;<span class="built_in">log</span>(<span class="number">4.8134</span>);</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">以4.8134的平方为底的对数为:1.5714037</span><br></pre></td></tr></table></figure></blockquote><h2 id="exp"><a href="#exp" class="headerlink" title="exp( )"></a>exp( )</h2><blockquote><p><code>double exp(double x);</code>求欧拉常数e的x次方。</p><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="string">"e的3次方是:"</span>&lt;&lt;<span class="built_in">exp</span>(<span class="number">3</span>);</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">e的3次方是:20.0855</span><br></pre></td></tr></table></figure></blockquote><h2 id="pow"><a href="#pow" class="headerlink" title="pow( )"></a>pow( )</h2><blockquote><p><code>double pow(double x, double y);</code>求x的y次方。</p><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="string">"4.2的5次方是:"</span>&lt;&lt;<span class="built_in">pow</span>(<span class="number">4.2</span>,<span class="number">5</span>);</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">4.2的5次方是:1306.91</span><br></pre></td></tr></table></figure></blockquote><h2 id="sin"><a href="#sin" class="headerlink" title="sin( )"></a>sin( )</h2><blockquote><p><code>double sin(double x);</code> 正弦函数。</p><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cout</span>&lt;&lt;fixed&lt;&lt;setprecision(<span class="number">7</span>)&lt;&lt;<span class="string">"sin(1.0)正弦是:"</span>&lt;&lt;<span class="built_in">sin</span>(<span class="number">1.0</span>);</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sin(1.0)正弦是:0.8414710</span><br></pre></td></tr></table></figure></blockquote><h2 id="cos"><a href="#cos" class="headerlink" title="cos( )"></a>cos( )</h2><blockquote><p><code>double cos(double x);</code>余弦函数。</p><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cout</span>&lt;&lt;fixed&lt;&lt;setprecision(<span class="number">7</span>)&lt;&lt;<span class="string">"cos(1.0)余弦是:"</span>&lt;&lt;<span class="built_in">cos</span>(<span class="number">1.0</span>);</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cos(1.0)余弦是:0.5403023</span><br></pre></td></tr></table></figure></blockquote><h2 id="tan"><a href="#tan" class="headerlink" title="tan( )"></a>tan( )</h2><blockquote><p><code>double tan(double x);</code> 正切函数。</p><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cout</span>&lt;&lt;fixed&lt;&lt;setprecision(<span class="number">7</span>)&lt;&lt;<span class="string">"tan(1.0)余弦是:"</span>&lt;&lt;<span class="built_in">tan</span>(<span class="number">1.0</span>);</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tan(1.0)余弦是:1.5574077</span><br></pre></td></tr></table></figure></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C/C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>回文数判断</title>
       <link href="/2020-01/25/%E7%AE%97%E6%B3%95/LeetCode/%E5%9B%9E%E6%96%87%E6%95%B0%E5%88%A4%E6%96%AD/"/>
       <url>/2020-01/25/%E7%AE%97%E6%B3%95/LeetCode/%E5%9B%9E%E6%96%87%E6%95%B0%E5%88%A4%E6%96%AD/</url>
@@ -336,11 +392,11 @@
     
     
     <entry>
-      <title>冒泡排序</title>
-      <link href="/2020-01/20/%E5%AD%A6%E4%B9%A0/%E6%8E%92%E5%BA%8F%E4%B9%8B%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/"/>
-      <url>/2020-01/20/%E5%AD%A6%E4%B9%A0/%E6%8E%92%E5%BA%8F%E4%B9%8B%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/</url>
+      <title>景点游览</title>
+      <link href="/2020-01/20/%E7%AE%97%E6%B3%95/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%88%9D%E7%BA%A7%E8%AE%AD%E7%BB%83/%E6%99%AF%E7%82%B9%E6%B8%B8%E8%A7%88/"/>
+      <url>/2020-01/20/%E7%AE%97%E6%B3%95/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%88%9D%E7%BA%A7%E8%AE%AD%E7%BB%83/%E6%99%AF%E7%82%B9%E6%B8%B8%E8%A7%88/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h1><h2 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h2>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="景点游览"><a href="#景点游览" class="headerlink" title="景点游览"></a>景点游览</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><blockquote><p><code>问题描述</code></p><p>　　小明来到一个景区游玩，但是他的时间有限，没办法逛遍所有的景点，所以他从网上下载了每个景点的评分，他希望能够使游览的景点的评分总和最高，于是他希望你帮他对于N个景点排下序。</p><p><code>输入格式</code></p><p>　　输入的第一行包含一个正整数N，表示N个景点。<br>　　第二行有N个正整数，表示每个景点的评分值。</p><p><code>输出格式</code></p><p>　　输出一行，包含N个正整数，表示N个景点的评分从大到小的排列</p><p><code>样例输入</code></p><p>4<br>3 2 4 1</p><p><code>样例输出</code></p><p>4 3 2 1</p><p><code>数据规模和约定</code></p><p>　　N&lt;=1000,每个景点的评分&lt;=10000。</p></blockquote><h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><blockquote><p>对数字使用数组进行存储，考虑到数组长度的定义。典型的排序问题，采取排序方式不同，程序的复杂度也将不一样</p></blockquote><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;  </span><br><span class="line"></span><br><span class="line"><span class="comment">//冒泡排序 </span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">MP</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> N)</span></span>&#123;</span><br><span class="line"><span class="keyword">int</span> temp;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N<span class="number">-1</span>;i++)&#123;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;N<span class="number">-1</span>-i;j++)&#123;</span><br><span class="line"><span class="keyword">if</span>(a[j]&lt;a[j+<span class="number">1</span>])&#123;</span><br><span class="line">temp=a[j];</span><br><span class="line">a[j]=a[j+<span class="number">1</span>];</span><br><span class="line">a[j+<span class="number">1</span>]=temp;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">int</span> N;</span><br><span class="line"><span class="built_in">cin</span>&gt;&gt;N;<span class="comment">//多少个数字</span></span><br><span class="line"><span class="keyword">int</span> a[N];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N;i++)</span><br><span class="line"><span class="built_in">cin</span>&gt;&gt;a[i];</span><br><span class="line">MP(a,N);</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;N;j++)</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;a[j]&lt;&lt;<span class="string">" "</span>;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">4</span><br><span class="line">3 2 4 1</span><br><span class="line">4 3 2 1</span><br><span class="line">--------------------------------</span><br><span class="line">Process exited after 15.77 seconds with <span class="built_in">return</span> value 0</span><br><span class="line">请按任意键继续. . .</span><br></pre></td></tr></table></figure><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote><p>对于排序有很多种方式：</p><ul><li>插入排序<ul><li>直接插入排序</li><li>希尔排序</li></ul></li><li>选择排序<ul><li>简单选择排序</li><li>堆排序</li></ul></li><li>交换排序<ul><li><a href>冒泡排序</a></li><li><a href>快速排序</a></li></ul></li></ul></blockquote>]]></content>
       
       
       <categories>
@@ -369,11 +425,11 @@
     
     
     <entry>
-      <title>景点游览</title>
-      <link href="/2020-01/20/%E7%AE%97%E6%B3%95/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%88%9D%E7%BA%A7%E8%AE%AD%E7%BB%83/%E6%99%AF%E7%82%B9%E6%B8%B8%E8%A7%88/"/>
-      <url>/2020-01/20/%E7%AE%97%E6%B3%95/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%88%9D%E7%BA%A7%E8%AE%AD%E7%BB%83/%E6%99%AF%E7%82%B9%E6%B8%B8%E8%A7%88/</url>
+      <title>冒泡排序</title>
+      <link href="/2020-01/20/%E5%AD%A6%E4%B9%A0/%E6%8E%92%E5%BA%8F%E4%B9%8B%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/"/>
+      <url>/2020-01/20/%E5%AD%A6%E4%B9%A0/%E6%8E%92%E5%BA%8F%E4%B9%8B%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="景点游览"><a href="#景点游览" class="headerlink" title="景点游览"></a>景点游览</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><blockquote><p><code>问题描述</code></p><p>　　小明来到一个景区游玩，但是他的时间有限，没办法逛遍所有的景点，所以他从网上下载了每个景点的评分，他希望能够使游览的景点的评分总和最高，于是他希望你帮他对于N个景点排下序。</p><p><code>输入格式</code></p><p>　　输入的第一行包含一个正整数N，表示N个景点。<br>　　第二行有N个正整数，表示每个景点的评分值。</p><p><code>输出格式</code></p><p>　　输出一行，包含N个正整数，表示N个景点的评分从大到小的排列</p><p><code>样例输入</code></p><p>4<br>3 2 4 1</p><p><code>样例输出</code></p><p>4 3 2 1</p><p><code>数据规模和约定</code></p><p>　　N&lt;=1000,每个景点的评分&lt;=10000。</p></blockquote><h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><blockquote><p>对数字使用数组进行存储，考虑到数组长度的定义。典型的排序问题，采取排序方式不同，程序的复杂度也将不一样</p></blockquote><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;  </span><br><span class="line"></span><br><span class="line"><span class="comment">//冒泡排序 </span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">MP</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> N)</span></span>&#123;</span><br><span class="line"><span class="keyword">int</span> temp;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N<span class="number">-1</span>;i++)&#123;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;N<span class="number">-1</span>-i;j++)&#123;</span><br><span class="line"><span class="keyword">if</span>(a[j]&lt;a[j+<span class="number">1</span>])&#123;</span><br><span class="line">temp=a[j];</span><br><span class="line">a[j]=a[j+<span class="number">1</span>];</span><br><span class="line">a[j+<span class="number">1</span>]=temp;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">int</span> N;</span><br><span class="line"><span class="built_in">cin</span>&gt;&gt;N;<span class="comment">//多少个数字</span></span><br><span class="line"><span class="keyword">int</span> a[N];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N;i++)</span><br><span class="line"><span class="built_in">cin</span>&gt;&gt;a[i];</span><br><span class="line">MP(a,N);</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;N;j++)</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;a[j]&lt;&lt;<span class="string">" "</span>;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">4</span><br><span class="line">3 2 4 1</span><br><span class="line">4 3 2 1</span><br><span class="line">--------------------------------</span><br><span class="line">Process exited after 15.77 seconds with <span class="built_in">return</span> value 0</span><br><span class="line">请按任意键继续. . .</span><br></pre></td></tr></table></figure><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote><p>对于排序有很多种方式：</p><ul><li>插入排序<ul><li>直接插入排序</li><li>希尔排序</li></ul></li><li>选择排序<ul><li>简单选择排序</li><li>堆排序</li></ul></li><li>交换排序<ul><li><a href>冒泡排序</a></li><li><a href>快速排序</a></li></ul></li></ul></blockquote>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h1><h2 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h2>]]></content>
       
       
       <categories>
@@ -458,37 +514,6 @@
     
     
     <entry>
-      <title>数据交换</title>
-      <link href="/2020-01/19/%E7%AE%97%E6%B3%95/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%88%9D%E7%BA%A7%E8%AE%AD%E7%BB%83/%E6%95%B0%E6%8D%AE%E4%BA%A4%E6%8D%A2/"/>
-      <url>/2020-01/19/%E7%AE%97%E6%B3%95/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%88%9D%E7%BA%A7%E8%AE%AD%E7%BB%83/%E6%95%B0%E6%8D%AE%E4%BA%A4%E6%8D%A2/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="数据交换"><a href="#数据交换" class="headerlink" title="数据交换"></a>数据交换</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><blockquote><p><code>问题描述</code><br>　　编写一个程序，输入两个整数，分别存放在变量x和y当中，然后使用自己定义的函数swap来交换这两个变量的值。<br>　　输入格式：输入只有一行，包括两个整数。<br>　　输出格式：输出只有一行，也是两个整数，即交换以后的结果。<br>　　要求：主函数负责数据的输入与输出，但不能直接交换这两个变量的值，必须通过调用单独定义的函数swap来完成，而swap函数只负责交换变量的值，不能输出交换后的结果。<br><code>输入输出样例</code></p><p><code>样例输入</code></p><p>4 7</p><p><code>样例输出</code></p><p>7 4</p></blockquote><h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><p><code>指针方式实现</code></p><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;  </span><br><span class="line"><span class="comment">//通过指针完成 </span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> *x,<span class="keyword">int</span> *y)</span></span>&#123;</span><br><span class="line"><span class="keyword">int</span> temp=*x;</span><br><span class="line">*x=*y;</span><br><span class="line">*y=temp;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> x,y;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="built_in">cin</span>&gt;&gt;x&gt;&gt;y;</span><br><span class="line">swap(x,y);</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;x&lt;&lt;<span class="string">" "</span>&lt;&lt;y;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><code>地址引用方式实现</code></p><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;  </span><br><span class="line"><span class="comment">//地址引用方式</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> &amp;x,<span class="keyword">int</span> &amp;y)</span></span>&#123;</span><br><span class="line"><span class="keyword">int</span> temp=x;</span><br><span class="line">x=y;</span><br><span class="line">y=temp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> x,y; </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="built_in">cin</span>&gt;&gt;x&gt;&gt;y;</span><br><span class="line">swap(x,y);</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;x&lt;&lt;<span class="string">" "</span>&lt;&lt;y;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">5 4</span><br><span class="line">4 5</span><br><span class="line">--------------------------------</span><br><span class="line">Process exited after 2.646 seconds with <span class="built_in">return</span> value 0</span><br><span class="line">请按任意键继续. . .</span><br></pre></td></tr></table></figure><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote><p>数据的交换，就是值的交换，本题要求通过自定义函数，不可以在主函数直接交换两个函数的值，那么采用取指针形式或者交换引用地址形式，做到两个变量值的交换与改变</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> 算法 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> C/C++ </tag>
-            
-            <tag> 算法 </tag>
-            
-            <tag> 蓝桥杯 </tag>
-            
-            <tag> swap </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>润年判断</title>
       <link href="/2020-01/19/%E7%AE%97%E6%B3%95/%E6%B6%A6%E5%B9%B4%E5%88%A4%E6%96%AD/"/>
       <url>/2020-01/19/%E7%AE%97%E6%B3%95/%E6%B6%A6%E5%B9%B4%E5%88%A4%E6%96%AD/</url>
@@ -512,6 +537,37 @@
             <tag> 蓝桥杯 </tag>
             
             <tag> 条件判断 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数据交换</title>
+      <link href="/2020-01/19/%E7%AE%97%E6%B3%95/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%88%9D%E7%BA%A7%E8%AE%AD%E7%BB%83/%E6%95%B0%E6%8D%AE%E4%BA%A4%E6%8D%A2/"/>
+      <url>/2020-01/19/%E7%AE%97%E6%B3%95/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%88%9D%E7%BA%A7%E8%AE%AD%E7%BB%83/%E6%95%B0%E6%8D%AE%E4%BA%A4%E6%8D%A2/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="数据交换"><a href="#数据交换" class="headerlink" title="数据交换"></a>数据交换</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><blockquote><p><code>问题描述</code><br>　　编写一个程序，输入两个整数，分别存放在变量x和y当中，然后使用自己定义的函数swap来交换这两个变量的值。<br>　　输入格式：输入只有一行，包括两个整数。<br>　　输出格式：输出只有一行，也是两个整数，即交换以后的结果。<br>　　要求：主函数负责数据的输入与输出，但不能直接交换这两个变量的值，必须通过调用单独定义的函数swap来完成，而swap函数只负责交换变量的值，不能输出交换后的结果。<br><code>输入输出样例</code></p><p><code>样例输入</code></p><p>4 7</p><p><code>样例输出</code></p><p>7 4</p></blockquote><h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><p><code>指针方式实现</code></p><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;  </span><br><span class="line"><span class="comment">//通过指针完成 </span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> *x,<span class="keyword">int</span> *y)</span></span>&#123;</span><br><span class="line"><span class="keyword">int</span> temp=*x;</span><br><span class="line">*x=*y;</span><br><span class="line">*y=temp;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> x,y;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="built_in">cin</span>&gt;&gt;x&gt;&gt;y;</span><br><span class="line">swap(x,y);</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;x&lt;&lt;<span class="string">" "</span>&lt;&lt;y;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><code>地址引用方式实现</code></p><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;  </span><br><span class="line"><span class="comment">//地址引用方式</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> &amp;x,<span class="keyword">int</span> &amp;y)</span></span>&#123;</span><br><span class="line"><span class="keyword">int</span> temp=x;</span><br><span class="line">x=y;</span><br><span class="line">y=temp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> x,y; </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="built_in">cin</span>&gt;&gt;x&gt;&gt;y;</span><br><span class="line">swap(x,y);</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;x&lt;&lt;<span class="string">" "</span>&lt;&lt;y;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">5 4</span><br><span class="line">4 5</span><br><span class="line">--------------------------------</span><br><span class="line">Process exited after 2.646 seconds with <span class="built_in">return</span> value 0</span><br><span class="line">请按任意键继续. . .</span><br></pre></td></tr></table></figure><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote><p>数据的交换，就是值的交换，本题要求通过自定义函数，不可以在主函数直接交换两个函数的值，那么采用取指针形式或者交换引用地址形式，做到两个变量值的交换与改变</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C/C++ </tag>
+            
+            <tag> 算法 </tag>
+            
+            <tag> 蓝桥杯 </tag>
+            
+            <tag> swap </tag>
             
         </tags>
       
@@ -584,6 +640,33 @@
     
     
     <entry>
+      <title>博客部署到Coding</title>
+      <link href="/2020-01/18/hexo/Deploy-Coding/"/>
+      <url>/2020-01/18/hexo/Deploy-Coding/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="将博客部署到Coding"><a href="#将博客部署到Coding" class="headerlink" title="将博客部署到Coding"></a>将博客部署到Coding</h1><p>登录注册就不一一说明了，直接上设置</p><h2 id="查找电脑的SSH"><a href="#查找电脑的SSH" class="headerlink" title="查找电脑的SSH"></a>查找电脑的<code>SSH</code></h2><p>打开如下电脑 C 盘用户下的 <code>.ssh</code> 目录，找到<code>id_rsa.pub</code>，复制里面所有内容</p><p><img alt data-src="https://img-blog.csdnimg.cn/20200120203626360.png" class="lazyload"></p><h2 id="首先进入个人设置"><a href="#首先进入个人设置" class="headerlink" title="首先进入个人设置"></a>首先进入<code>个人设置</code></h2><p><img alt data-src="https://ftp.bmp.ovh/imgs/2020/01/aeb5a3f80284200f.png" class="lazyload"></p><h2 id="配置SSH"><a href="#配置SSH" class="headerlink" title="配置SSH"></a>配置SSH</h2><p><code>配置SSH公钥</code></p><p><img alt data-src="https://ftp.bmp.ovh/imgs/2020/01/e4c41bf4ea3205ed.png" class="lazyload"></p><p><code>新增SSH</code></p><p><img alt data-src="https://s2.ax1x.com/2020/01/17/lxrvfU.png" class="lazyload"></p><h2 id="测试配置"><a href="#测试配置" class="headerlink" title="测试配置"></a>测试配置</h2><blockquote><p>测试 SSH 公钥是否添加成功：本地打开 Git Bash 窗口，输入一下命令：</p><p><code>ssh -T git@coding.net</code></p></blockquote><p>若出现这种情况</p><blockquote><p><code>ssh: connect to host coding.net port 22: Connection refused</code></p><p>如图：</p><p><img alt="lxsMnA.png" data-src="https://s2.ax1x.com/2020/01/17/lxsMnA.png" class="lazyload"></p></blockquote><p>说明防火墙完全屏蔽了端口 22 ，这时候不要慌张，直接输入如下命令使用 Coding 提供的 443 端口 SSH 服务即可解决：</p><blockquote><p><code>ssh -T -p 443 git@git-ssh.coding.net</code></p></blockquote><p>接着会显示是否继续，选择 yes 继续，如果提示下列内容成功，即 SSH 公钥配置成功：</p><p><img alt="lxs07q.png" data-src="https://s2.ax1x.com/2020/01/17/lxs07q.png" class="lazyload"></p><h2 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h2><p>新建项目，填写项目信息。</p><p>建立完成后，打开</p><h2 id="配置博客主文件"><a href="#配置博客主文件" class="headerlink" title="配置博客主文件"></a>配置博客主文件</h2><p>打开 Hexo 博客主配置文件 <code>_config.yml</code>，找到 <code>deploy</code> 属性，作如下配置：</p><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">    type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">    repository:</span></span><br><span class="line"><span class="attr">      github:</span> <span class="string">git@github.com:xjc5772/xjc5772.github.io.git</span></span><br><span class="line"><span class="attr">      coding:</span> <span class="string">git@e.coding.net:jachie/Jachie.git</span></span><br><span class="line"><span class="attr">    branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure><p>打开 Hexo 主目录下的 <code>source</code> 文件，新建文件 <code>Staticfile</code> ，这个文件是 Coding 静态文件部署的标志，注意文件名字必须为 <code>Staticfile</code>，否则 Coding 上无法完成静态文件的部署，如下图所示：</p><p><img alt="img" data-src="https://img-blog.csdnimg.cn/20200120204127965.png" class="lazyload"></p><h2 id="Coding项目创建"><a href="#Coding项目创建" class="headerlink" title="Coding项目创建"></a>Coding项目创建</h2><blockquote><p>主页创建项目<br><img alt data-src="https://img-blog.csdnimg.cn/20200120204438411.png" class="lazyload"><br><img alt data-src="https://img-blog.csdnimg.cn/20200120204453122.png" class="lazyload"><br><img alt data-src="https://img-blog.csdnimg.cn/20200120204709489.png" class="lazyload"></p></blockquote><h2 id="Coding构建静态页面"><a href="#Coding构建静态页面" class="headerlink" title="Coding构建静态页面"></a>Coding构建静态页面</h2><blockquote><p>进入项目<br><img alt data-src="https://img-blog.csdnimg.cn/2020012020473487.png" class="lazyload"><br><code>当代码上传到代码仓库后，即可去构建静态网站</code><br><img alt data-src="https://img-blog.csdnimg.cn/2020012020480056.png" class="lazyload"><br><code>这里就是静态网站的访问页面</code></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> Coding </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>数列特征</title>
       <link href="/2020-01/18/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%88%97%E7%89%B9%E5%BE%81/"/>
       <url>/2020-01/18/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%88%97%E7%89%B9%E5%BE%81/</url>
@@ -607,33 +690,6 @@
             <tag> 蓝桥杯 </tag>
             
             <tag> 循环 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>博客部署到Coding</title>
-      <link href="/2020-01/18/hexo/Deploy-Coding/"/>
-      <url>/2020-01/18/hexo/Deploy-Coding/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="将博客部署到Coding"><a href="#将博客部署到Coding" class="headerlink" title="将博客部署到Coding"></a>将博客部署到Coding</h1><p>登录注册就不一一说明了，直接上设置</p><h2 id="查找电脑的SSH"><a href="#查找电脑的SSH" class="headerlink" title="查找电脑的SSH"></a>查找电脑的<code>SSH</code></h2><p>打开如下电脑 C 盘用户下的 <code>.ssh</code> 目录，找到<code>id_rsa.pub</code>，复制里面所有内容</p><p><img alt data-src="https://img-blog.csdnimg.cn/20200120203626360.png" class="lazyload"></p><h2 id="首先进入个人设置"><a href="#首先进入个人设置" class="headerlink" title="首先进入个人设置"></a>首先进入<code>个人设置</code></h2><p><img alt data-src="https://ftp.bmp.ovh/imgs/2020/01/aeb5a3f80284200f.png" class="lazyload"></p><h2 id="配置SSH"><a href="#配置SSH" class="headerlink" title="配置SSH"></a>配置SSH</h2><p><code>配置SSH公钥</code></p><p><img alt data-src="https://ftp.bmp.ovh/imgs/2020/01/e4c41bf4ea3205ed.png" class="lazyload"></p><p><code>新增SSH</code></p><p><img alt data-src="https://s2.ax1x.com/2020/01/17/lxrvfU.png" class="lazyload"></p><h2 id="测试配置"><a href="#测试配置" class="headerlink" title="测试配置"></a>测试配置</h2><blockquote><p>测试 SSH 公钥是否添加成功：本地打开 Git Bash 窗口，输入一下命令：</p><p><code>ssh -T git@coding.net</code></p></blockquote><p>若出现这种情况</p><blockquote><p><code>ssh: connect to host coding.net port 22: Connection refused</code></p><p>如图：</p><p><img alt="lxsMnA.png" data-src="https://s2.ax1x.com/2020/01/17/lxsMnA.png" class="lazyload"></p></blockquote><p>说明防火墙完全屏蔽了端口 22 ，这时候不要慌张，直接输入如下命令使用 Coding 提供的 443 端口 SSH 服务即可解决：</p><blockquote><p><code>ssh -T -p 443 git@git-ssh.coding.net</code></p></blockquote><p>接着会显示是否继续，选择 yes 继续，如果提示下列内容成功，即 SSH 公钥配置成功：</p><p><img alt="lxs07q.png" data-src="https://s2.ax1x.com/2020/01/17/lxs07q.png" class="lazyload"></p><h2 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h2><p>新建项目，填写项目信息。</p><p>建立完成后，打开</p><h2 id="配置博客主文件"><a href="#配置博客主文件" class="headerlink" title="配置博客主文件"></a>配置博客主文件</h2><p>打开 Hexo 博客主配置文件 <code>_config.yml</code>，找到 <code>deploy</code> 属性，作如下配置：</p><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">    type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">    repository:</span></span><br><span class="line"><span class="attr">      github:</span> <span class="string">git@github.com:xjc5772/xjc5772.github.io.git</span></span><br><span class="line"><span class="attr">      coding:</span> <span class="string">git@e.coding.net:jachie/Jachie.git</span></span><br><span class="line"><span class="attr">    branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure><p>打开 Hexo 主目录下的 <code>source</code> 文件，新建文件 <code>Staticfile</code> ，这个文件是 Coding 静态文件部署的标志，注意文件名字必须为 <code>Staticfile</code>，否则 Coding 上无法完成静态文件的部署，如下图所示：</p><p><img alt="img" data-src="https://img-blog.csdnimg.cn/20200120204127965.png" class="lazyload"></p><h2 id="Coding项目创建"><a href="#Coding项目创建" class="headerlink" title="Coding项目创建"></a>Coding项目创建</h2><blockquote><p>主页创建项目<br><img alt data-src="https://img-blog.csdnimg.cn/20200120204438411.png" class="lazyload"><br><img alt data-src="https://img-blog.csdnimg.cn/20200120204453122.png" class="lazyload"><br><img alt data-src="https://img-blog.csdnimg.cn/20200120204709489.png" class="lazyload"></p></blockquote><h2 id="Coding构建静态页面"><a href="#Coding构建静态页面" class="headerlink" title="Coding构建静态页面"></a>Coding构建静态页面</h2><blockquote><p>进入项目<br><img alt data-src="https://img-blog.csdnimg.cn/2020012020473487.png" class="lazyload"><br><code>当代码上传到代码仓库后，即可去构建静态网站</code><br><img alt data-src="https://img-blog.csdnimg.cn/2020012020480056.png" class="lazyload"><br><code>这里就是静态网站的访问页面</code></p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Hexo </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Hexo </tag>
-            
-            <tag> Coding </tag>
             
         </tags>
       
@@ -825,11 +881,11 @@
             
             <tag> 蓝桥杯 </tag>
             
-            <tag> 条件判断 </tag>
-            
             <tag> 进制转换 </tag>
             
             <tag> 字符处理 </tag>
+            
+            <tag> 条件判断 </tag>
             
         </tags>
       
