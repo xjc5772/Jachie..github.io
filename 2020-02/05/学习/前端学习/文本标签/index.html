@@ -1,0 +1,341 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>文本标签 | XJC&amp;Blog</title><meta name="description" content="HTML有许多的文本标签，通过这些文本标签，将网页变得更加规整化，对其的处理也更加得方便化"><meta name="keywords" content="CSS,前端"><meta name="author" content="Jachie Xie"><meta name="copyright" content="Jachie Xie"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="preconnect" href="//cdn.jsdelivr.net"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="文本标签"><meta name="twitter:description" content="HTML有许多的文本标签，通过这些文本标签，将网页变得更加规整化，对其的处理也更加得方便化"><meta name="twitter:image" content="https://cdn.pixabay.com/photo/2020/01/06/18/59/poultry-4745997__340.jpg"><meta property="og:type" content="article"><meta property="og:title" content="文本标签"><meta property="og:url" content="https://xjc5772.github.io/2020-02/05/%E5%AD%A6%E4%B9%A0/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E6%96%87%E6%9C%AC%E6%A0%87%E7%AD%BE/"><meta property="og:site_name" content="XJC&amp;Blog"><meta property="og:description" content="HTML有许多的文本标签，通过这些文本标签，将网页变得更加规整化，对其的处理也更加得方便化"><meta property="og:image" content="https://cdn.pixabay.com/photo/2020/01/06/18/59/poultry-4745997__340.jpg"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>const autoChangeMode = 'false'
+var t = Cookies.get("theme");
+if (autoChangeMode == '1'){
+const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+const isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+const isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+if (t === undefined){
+  if (isLightMode) activateLightMode()
+  else if (isDarkMode) activateDarkMode()
+  else if (isNotSpecified || hasNoSupport){
+    console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+    now = new Date();
+    hour = now.getHours();
+    isNight = hour < 6 || hour >= 18
+    isNight ? activateDarkMode() : activateLightMode()
+}
+} else if (t == 'light') activateLightMode()
+else activateDarkMode()
+
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.15/dist/snackbar.min.css"><link rel="canonical" href="https://xjc5772.github.io/2020-02/05/%E5%AD%A6%E4%B9%A0/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E6%96%87%E6%9C%AC%E6%A0%87%E7%AD%BE/"><link rel="next" title="属性选择器" href="https://xjc5772.github.io/2020-02/03/%E5%AD%A6%E4%B9%A0/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://xjc5772.github.io/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  highlight_copy: 'true',
+  highlight_lang: 'true',
+  highlight_shrink: 'false',
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    title: 'Snackbar.bookmark.title',
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  copyright: undefined,
+  copy_copyright_js: false,
+  ClickShowText: undefined,
+  medium_zoom: 'false',
+  Snackbar: {"bookmark":{"title":"Snackbar.bookmark.title","message_prev":"按","message_next":"键将本页加入书签"},"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#2d3035","position":"bottom-left"}
+  
+}</script></head><body><div id="header"> <div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">XJC&amp;Blog</a></span><i class="fa fa-bars fa-fw toggle-menu pull_right close" aria-hidden="true"></i><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 列表</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div></span><span class="pull_right" id="search_button"><a class="site-page social-icon search"><i class="fa fa-search fa-fw"></i><span> 搜索</span></a></span></div></div><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="lazyload avatar_img" src="https://i.loli.net/2019/11/19/y9F2N5EaYASTzvR.jpg" onerror="onerror=null;src='/img/friend_404.gif'"></div><div class="mobile_post_data"><div class="mobile_data_item is_center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">67</div></a></div></div><div class="mobile_data_item is_center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">43</div></a></div></div><div class="mobile_data_item is_center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">10</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 列表</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div></div><div id="mobile-sidebar-toc"><div class="toc_mobile_headline">目录</div><ol class="toc_mobile_items"><li class="toc_mobile_items-item toc_mobile_items-level-1"><a class="toc_mobile_items-link" href="#文本标签"><span class="toc_mobile_items-number">1.</span> <span class="toc_mobile_items-text">文本标签</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#lt-em-gt-和-lt-strong-gt"><span class="toc_mobile_items-number">1.1.</span> <span class="toc_mobile_items-text">&lt;em&gt;和&lt;strong&gt;</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#lt-i-gt-和-lt-b-gt"><span class="toc_mobile_items-number">1.2.</span> <span class="toc_mobile_items-text">&lt;i&gt;和&lt;b&gt;</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#lt-small-gt"><span class="toc_mobile_items-number">1.3.</span> <span class="toc_mobile_items-text">&lt;small&gt;</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#lt-cite-gt"><span class="toc_mobile_items-number">1.4.</span> <span class="toc_mobile_items-text">&lt;cite&gt;</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#lt-blockquote-gt-和-lt-q-gt"><span class="toc_mobile_items-number">1.5.</span> <span class="toc_mobile_items-text">&lt;blockquote&gt;和&lt;q&gt;</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#lt-ins-gt-和-lt-del-gt"><span class="toc_mobile_items-number">1.6.</span> <span class="toc_mobile_items-text">&lt;ins&gt;和&lt;del&gt;</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#lt-code-gt-和-lt-pre-gt"><span class="toc_mobile_items-number">1.7.</span> <span class="toc_mobile_items-text">&lt;code&gt;和&lt;pre&gt;</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-1"><a class="toc_mobile_items-link" href="#单位"><span class="toc_mobile_items-number">2.</span> <span class="toc_mobile_items-text">单位</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#px"><span class="toc_mobile_items-number">2.1.</span> <span class="toc_mobile_items-text">px</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#百分比"><span class="toc_mobile_items-number">2.2.</span> <span class="toc_mobile_items-text">百分比</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#em"><span class="toc_mobile_items-number">2.3.</span> <span class="toc_mobile_items-text">em</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#颜色"><span class="toc_mobile_items-number">2.4.</span> <span class="toc_mobile_items-text">颜色</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#十六进制颜色"><span class="toc_mobile_items-number">2.4.1.</span> <span class="toc_mobile_items-text">十六进制颜色</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#RGB值"><span class="toc_mobile_items-number">2.4.2.</span> <span class="toc_mobile_items-text">RGB值</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#RGBA"><span class="toc_mobile_items-number">2.4.3.</span> <span class="toc_mobile_items-text">RGBA</span></a></li></ol></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-1"><a class="toc_mobile_items-link" href="#文字样式"><span class="toc_mobile_items-number">3.</span> <span class="toc_mobile_items-text">文字样式</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#文字大小"><span class="toc_mobile_items-number">3.1.</span> <span class="toc_mobile_items-text">文字大小</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#字体"><span class="toc_mobile_items-number">3.2.</span> <span class="toc_mobile_items-text">字体</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#斜体和粗体"><span class="toc_mobile_items-number">3.2.1.</span> <span class="toc_mobile_items-text">斜体和粗体</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#小型大写字母"><span class="toc_mobile_items-number">3.2.2.</span> <span class="toc_mobile_items-text">小型大写字母</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#字体属性的简写"><span class="toc_mobile_items-number">3.2.3.</span> <span class="toc_mobile_items-text">字体属性的简写</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#行间距"><span class="toc_mobile_items-number">3.3.</span> <span class="toc_mobile_items-text">行间距</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#大写化"><span class="toc_mobile_items-number">3.4.</span> <span class="toc_mobile_items-text">大写化</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#文本的修饰"><span class="toc_mobile_items-number">3.5.</span> <span class="toc_mobile_items-text">文本的修饰</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#字母间距和单词间距"><span class="toc_mobile_items-number">3.6.</span> <span class="toc_mobile_items-text">字母间距和单词间距</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#对齐文本"><span class="toc_mobile_items-number">3.7.</span> <span class="toc_mobile_items-text">对齐文本</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#首行缩进"><span class="toc_mobile_items-number">3.8.</span> <span class="toc_mobile_items-text">首行缩进</span></a></li></ol></li></ol></div></div><div id="body-wrap"><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true">     </i><div class="auto_open" id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#文本标签"><span class="toc-number">1.</span> <span class="toc-text">文本标签</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#lt-em-gt-和-lt-strong-gt"><span class="toc-number">1.1.</span> <span class="toc-text">&lt;em&gt;和&lt;strong&gt;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#lt-i-gt-和-lt-b-gt"><span class="toc-number">1.2.</span> <span class="toc-text">&lt;i&gt;和&lt;b&gt;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#lt-small-gt"><span class="toc-number">1.3.</span> <span class="toc-text">&lt;small&gt;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#lt-cite-gt"><span class="toc-number">1.4.</span> <span class="toc-text">&lt;cite&gt;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#lt-blockquote-gt-和-lt-q-gt"><span class="toc-number">1.5.</span> <span class="toc-text">&lt;blockquote&gt;和&lt;q&gt;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#lt-ins-gt-和-lt-del-gt"><span class="toc-number">1.6.</span> <span class="toc-text">&lt;ins&gt;和&lt;del&gt;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#lt-code-gt-和-lt-pre-gt"><span class="toc-number">1.7.</span> <span class="toc-text">&lt;code&gt;和&lt;pre&gt;</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#单位"><span class="toc-number">2.</span> <span class="toc-text">单位</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#px"><span class="toc-number">2.1.</span> <span class="toc-text">px</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#百分比"><span class="toc-number">2.2.</span> <span class="toc-text">百分比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#em"><span class="toc-number">2.3.</span> <span class="toc-text">em</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#颜色"><span class="toc-number">2.4.</span> <span class="toc-text">颜色</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#十六进制颜色"><span class="toc-number">2.4.1.</span> <span class="toc-text">十六进制颜色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RGB值"><span class="toc-number">2.4.2.</span> <span class="toc-text">RGB值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RGBA"><span class="toc-number">2.4.3.</span> <span class="toc-text">RGBA</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文字样式"><span class="toc-number">3.</span> <span class="toc-text">文字样式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#文字大小"><span class="toc-number">3.1.</span> <span class="toc-text">文字大小</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字体"><span class="toc-number">3.2.</span> <span class="toc-text">字体</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#斜体和粗体"><span class="toc-number">3.2.1.</span> <span class="toc-text">斜体和粗体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#小型大写字母"><span class="toc-number">3.2.2.</span> <span class="toc-text">小型大写字母</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字体属性的简写"><span class="toc-number">3.2.3.</span> <span class="toc-text">字体属性的简写</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#行间距"><span class="toc-number">3.3.</span> <span class="toc-text">行间距</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#大写化"><span class="toc-number">3.4.</span> <span class="toc-text">大写化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文本的修饰"><span class="toc-number">3.5.</span> <span class="toc-text">文本的修饰</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字母间距和单词间距"><span class="toc-number">3.6.</span> <span class="toc-text">字母间距和单词间距</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对齐文本"><span class="toc-number">3.7.</span> <span class="toc-text">对齐文本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#首行缩进"><span class="toc-number">3.8.</span> <span class="toc-text">首行缩进</span></a></li></ol></li></ol></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture)"><div id="post-info"><div id="post-title"><div class="posttitle">文本标签</div></div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 发表于 2020-02-05<span class="post-meta__separator">|</span><i class="fa fa-history" aria-hidden="true"></i> 更新于 2020-02-05</time><span class="post-meta__separator mobile_hidden">|</span><span class="mobile_hidden"><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span><div class="post-meta-wordcount"><i class="fa fa-file-word-o post-meta__icon" aria-hidden="true"></i><span>字数总计: </span><span class="word-count">2.4k</span><span class="post-meta__separator">|</span><i class="fa fa-clock-o post-meta__icon" aria-hidden="true"></i><span>阅读时长: 9 分钟</span><span class="post-meta__separator">|</span><i class="fa fa-eye post-meta__icon" aria-hidden="true">       </i><span>阅读量: </span><span id="busuanzi_value_page_pv"></span></div></div></div></div><div class="layout layout_post" id="content-inner">   <article id="post"><div class="article-container" id="post-content"><h1 id="文本标签"><a href="#文本标签" class="headerlink" title="文本标签"></a>文本标签</h1><h2 id="lt-em-gt-和-lt-strong-gt"><a href="#lt-em-gt-和-lt-strong-gt" class="headerlink" title="&lt;em&gt;和&lt;strong&gt;"></a><code>&lt;em&gt;</code>和<code>&lt;strong&gt;</code></h2><blockquote>
+<ul>
+<li><code>em</code>标签用于表示一段内容中的着重点。 </li>
+<li><code>strong</code>标签用于表示一个内容的重要性。 </li>
+<li>这两个标签可以单独使用，也可以一起使用。</li>
+<li>通常<code>em</code>显示为斜体，而<code>strong</code>显示为粗体。</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">em</span>&gt;</span>今儿天气挺好的<span class="tag">&lt;/<span class="name">em</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">strong</span>&gt;</span>认真听课！<span class="tag">&lt;/<span class="name">strong</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img alt data-src="https://img-blog.csdnimg.cn/20200205141522387.png" class="lazyload"></p>
+</blockquote>
+<h2 id="lt-i-gt-和-lt-b-gt"><a href="#lt-i-gt-和-lt-b-gt" class="headerlink" title="&lt;i&gt;和&lt;b&gt;"></a><code>&lt;i&gt;</code>和<code>&lt;b&gt;</code></h2><blockquote>
+<ul>
+<li><code>i</code>标签会使文字变成斜体。</li>
+<li><code>b</code>标签会使文字变成粗体。 </li>
+<li>这两个标签和<code>em</code>和<code>strong</code>类似，但是这两 个标签没有语义。</li>
+<li>所以根据html5标准，当我们只想设置文本 特殊显示，而不需要强调内容时就可以使 用i和b标签。</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">i</span>&gt;</span>这是i标签内容<span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">b</span>&gt;</span>这是b标签内容<span class="tag">&lt;/<span class="name">b</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img alt data-src="https://img-blog.csdnimg.cn/20200205142023596.png" class="lazyload"></p>
+</blockquote>
+<p><code>h5规范中规定，对于不需要着重的内容而是单纯的加粗或者是斜体，就可以使用b和i标签。</code></p>
+<h2 id="lt-small-gt"><a href="#lt-small-gt" class="headerlink" title="&lt;small&gt;"></a><code>&lt;small&gt;</code></h2><blockquote>
+<ul>
+<li><code>small</code>标签表示细则一类的旁注，通常包括 免责声明、注意事项、法律限制、版权信 息等。 </li>
+<li>浏览器在显示<code>small</code>标签时会显示一个比父 元素小的字号。</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">    我是p标签中的内容</span><br><span class="line">    <span class="tag">&lt;<span class="name">small</span>&gt;</span>我是small中的内容<span class="tag">&lt;/<span class="name">small</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img alt data-src="https://img-blog.csdnimg.cn/20200205142733701.png" class="lazyload"></p>
+<p><code>small标签中的内容回避他的父元素中的文字要小一些，在h5中使用small标签来表示一些细则一类的内容。比如：合同中小字，网站的版权声明都可以放到small</code></p>
+</blockquote>
+<h2 id="lt-cite-gt"><a href="#lt-cite-gt" class="headerlink" title="&lt;cite&gt;"></a><code>&lt;cite&gt;</code></h2><blockquote>
+<p>使用<code>cite</code>标签可以指明对某内容的引用或参考。</p>
+<p>例如，戏剧、文章或图书的标题，歌 曲、电影、照片或雕塑的名称等。 </p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">cite</span>&gt;</span>《平凡的世界》<span class="tag">&lt;/<span class="name">cite</span>&gt;</span>是一部文学作品</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img alt data-src="https://img-blog.csdnimg.cn/2020020514310283.png" class="lazyload"></p>
+</blockquote>
+<h2 id="lt-blockquote-gt-和-lt-q-gt"><a href="#lt-blockquote-gt-和-lt-q-gt" class="headerlink" title="&lt;blockquote&gt;和&lt;q&gt;"></a><code>&lt;blockquote&gt;和&lt;q&gt;</code></h2><blockquote>
+<ul>
+<li><code>blockquote</code>和<code>q</code>表示标记引用的文本。 </li>
+<li><code>blockquote</code>用于长引用（块级引用），<code>q</code>用于短引用（行内引用）。 <ul>
+<li><code>q</code>标签引用的内容，浏览器会默认加上引号</li>
+<li><code>blockquote</code>引用的内容会独占一行</li>
+</ul>
+</li>
+<li>在两个标签中还可以使用cite属性来表示引用的地址。 </li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">    子曰：<span class="tag">&lt;<span class="name">q</span>&gt;</span>学而时习之，不亦说乎！<span class="tag">&lt;/<span class="name">q</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">    子曰：</span><br><span class="line">    <span class="tag">&lt;<span class="name">blockquote</span>&gt;</span></span><br><span class="line">        天将降大任于是人也...</span><br><span class="line">    <span class="tag">&lt;/<span class="name">blockquote</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img alt data-src="https://img-blog.csdnimg.cn/20200205143752727.png" class="lazyload"></p>
+</blockquote>
+<p><code>&lt;sup&gt;和&lt;sub&gt;</code></p>
+<blockquote>
+<ul>
+<li>sup和sub用于定义上标和下标。 </li>
+<li>上标主要用于表示类似于$10^3$中的<code>3</code>。 </li>
+<li>下标则用于表示类似余$H_2O$中的<code>2</code>。</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">    10<span class="tag">&lt;<span class="name">sup</span>&gt;</span>3<span class="tag">&lt;/<span class="name">sup</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">    H<span class="tag">&lt;<span class="name">sub</span>&gt;</span>2<span class="tag">&lt;/<span class="name">sub</span>&gt;</span>O</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 百度常用的引用样式 --&gt;</span></span><br><span class="line">    马化腾<span class="tag">&lt;<span class="name">sup</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>[1]<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">sup</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img alt data-src="https://img-blog.csdnimg.cn/20200205144805123.png" class="lazyload"></p>
+</blockquote>
+<h2 id="lt-ins-gt-和-lt-del-gt"><a href="#lt-ins-gt-和-lt-del-gt" class="headerlink" title="&lt;ins&gt;和&lt;del&gt;"></a><code>&lt;ins&gt;和&lt;del&gt;</code></h2><blockquote>
+<ul>
+<li><code>ins</code>表示插入的内容，显示时通常会加上下划线。 </li>
+<li><code>del</code>表示删除的内容，显示时通常会加上删除线。</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">del</span>&gt;</span>17.75<span class="tag">&lt;/<span class="name">del</span>&gt;</span><span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br><span class="line">    12.88<span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">    这是一道 <span class="tag">&lt;<span class="name">ins</span>&gt;</span>填空<span class="tag">&lt;/<span class="name">ins</span>&gt;</span> 题</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img alt data-src="https://img-blog.csdnimg.cn/20200205151130807.png" class="lazyload"></p>
+</blockquote>
+<h2 id="lt-code-gt-和-lt-pre-gt"><a href="#lt-code-gt-和-lt-pre-gt" class="headerlink" title="&lt;code&gt;和&lt;pre&gt;"></a><code>&lt;code&gt;</code>和<code>&lt;pre&gt;</code></h2><blockquote>
+<ul>
+<li><p><code>pre</code>是一个预格式标签，会将代码中的格式保存，不会忽略多个空格</p>
+</li>
+<li><p><code>code</code>专门用来表示代码</p>
+</li>
+<li>如果你的内容包含代码示例或文件名，就 可以使用<code>code</code>元素。</li>
+<li><code>pre</code>元素表示的是预格式化文本，可以使用<code>pre</code>包住<code>code</code>来表示一段代码。 </li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">pre</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">code</span>&gt;</span></span><br><span class="line">        p&#123;</span><br><span class="line">            margin-left: 20px;</span><br><span class="line">        &#125;	</span><br><span class="line">    <span class="tag">&lt;/<span class="name">code</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">pre</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img alt data-src="https://img-blog.csdnimg.cn/20200205161633805.png" class="lazyload"></p>
+</blockquote>
+<h1 id="单位"><a href="#单位" class="headerlink" title="单位"></a>单位</h1><h2 id="px"><a href="#px" class="headerlink" title="px"></a>px</h2><blockquote>
+<p>&emsp;&emsp;如果我们将一个图片放大的话，我们会发现一个图片 是有一个一个的小色块构成的，这一个小色块就是一 个像素，也就是1px，对于不同的显示器来说一个像素的大小是不同的。 </p>
+</blockquote>
+<h2 id="百分比"><a href="#百分比" class="headerlink" title="百分比"></a>百分比</h2><blockquote>
+<p>&emsp;&emsp;可以使用一个百分数来表示一个大小，百分比是相 对于父元素来说的，如果父元素使用的大小是16px， 则100%就是16px，200%就是32px。 </p>
+</blockquote>
+<h2 id="em"><a href="#em" class="headerlink" title="em"></a>em</h2><blockquote>
+<p>&emsp;&emsp;em和百分比类似，也是相对于父元素说的，1em就相 当于100%，2em相当于200%，1.5em相当于150%。</p>
+</blockquote>
+<h2 id="颜色"><a href="#颜色" class="headerlink" title="颜色"></a>颜色</h2><blockquote>
+<ul>
+<li>在CSS中可以直接使用颜色的关键字来代表 一种颜色。 </li>
+<li>还有147种svg颜色，这里就不一一列举了， 但是明显即使这些颜色变成double，也不 足以描绘我们世界中所有的颜色</li>
+</ul>
+</blockquote>
+<h3 id="十六进制颜色"><a href="#十六进制颜色" class="headerlink" title="十六进制颜色"></a>十六进制颜色</h3><blockquote>
+<ul>
+<li><p>用的最多的颜色是十六进制符号。一个颜色值， 比如：<code>#6600FF</code>实际上包含了三组十六进制的 数字。 </p>
+</li>
+<li><p>上边的例子中66代表红色的浓度，00代表绿色的浓度，FF代表了蓝色的浓度。最后的颜色 是由这些指定浓度的红绿蓝混合而成的。</p>
+</li>
+<li><code>如果每一组数中的两个数字都相同，就可以把十六进制的数字缩短为只有3个字符，如将 #6600FF缩短为#60F。</code></li>
+</ul>
+</blockquote>
+<h3 id="RGB值"><a href="#RGB值" class="headerlink" title="RGB值"></a>RGB值</h3><blockquote>
+<ul>
+<li>也可以使用计算机中常用的RGB值来表示 颜色。可以使用0~255的数值，也可以使 用0%~100%的百分比数。 <ul>
+<li>– <code>RGB(100%,0%,0%)</code></li>
+<li>– <code>RGB(0,255,0)</code></li>
+</ul>
+</li>
+<li>第一个数表示红色的浓度，第二个数表示 绿色浓度，第三个数表示蓝色的浓度。</li>
+</ul>
+</blockquote>
+<h3 id="RGBA"><a href="#RGBA" class="headerlink" title="RGBA"></a>RGBA</h3><blockquote>
+<ul>
+<li>RGBA表示一个颜色和RGB类似，只不过比 RGB多了一个<code>A（alpha）</code>来表示透明度， 透明度需要一个0-1的值。0表示完全透明， 1表示完全不透明。<ul>
+<li>– <code>RGBA(255,100,5,0.5)</code></li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h1 id="文字样式"><a href="#文字样式" class="headerlink" title="文字样式"></a>文字样式</h1><h2 id="文字大小"><a href="#文字大小" class="headerlink" title="文字大小"></a>文字大小</h2><blockquote>
+<p> <code>font-size</code>用来指定文字的大小。</p>
+</blockquote>
+<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><p><code>font-family</code></p>
+<blockquote>
+<p>通过<code>font-family</code>可以指定标签中文字使用 的字体。 </p>
+<p>一般来说只有用户计算机中安装了我们指 定的字体时，它才会显示，否则这行代码 是没有意义的。</p>
+<p>通过<code>font-family</code>可以同时指定多个字体。 那么到底 使用的是哪个呢？浏览器会优先使用第一 个，如果没有找到则使用第二个，以此类 推。 </p>
+<p><code>字体分类</code></p>
+<ul>
+<li>serif（衬线字体） </li>
+<li>sans-serif（非衬线字体）</li>
+<li>monospace （等宽字体）</li>
+<li>cursive （草书字体）</li>
+<li>fantasy （虚幻字体）</li>
+<li><code>以上这些分类都是一些大的分类，并没有 涉及具体的类型，如果将字体指定为这些 格式，浏览器会自己选择指定类型的字体。</code></li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">" font-family: serif  "</span>&gt;</span></span><br><span class="line">    字体1</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">" font-family:  sans-serif  "</span>&gt;</span></span><br><span class="line">    字体1</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">" font-family: monospace   "</span>&gt;</span></span><br><span class="line">    字体1</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">" font-family: cursive   "</span>&gt;</span></span><br><span class="line">    字体1</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">" font-family: fantasy    "</span>&gt;</span></span><br><span class="line">    字体1</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img alt data-src="https://img-blog.csdnimg.cn/20200205185000460.png" class="lazyload"></p>
+</blockquote>
+<h3 id="斜体和粗体"><a href="#斜体和粗体" class="headerlink" title="斜体和粗体"></a>斜体和粗体</h3><p><code>font-style</code>用来指定文本的斜体。 </p>
+<blockquote>
+<ul>
+<li>指定斜体：<code>`font-style:italic</code></li>
+<li>指定非斜体：<code>font-style:normal</code></li>
+</ul>
+</blockquote>
+<p><code>font-weight</code>用来指定文本的粗体。 </p>
+<blockquote>
+<ul>
+<li>指定粗体：<code>font-weight:bold</code></li>
+<li>指定非粗体：<code>font-weight:normal</code></li>
+</ul>
+</blockquote>
+<h3 id="小型大写字母"><a href="#小型大写字母" class="headerlink" title="小型大写字母"></a>小型大写字母</h3><blockquote>
+<p><code>font-variant</code>属性可以将字母类型设置为小型大写。在该样式中，字母看起来像是稍微缩小了尺寸的大写字母。 </p>
+<p><code>font-variant:small-caps</code></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">" font-variant: small-caps  "</span>&gt;</span></span><br><span class="line">    abc</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> &gt;</span></span><br><span class="line">    abc</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img alt data-src="https://img-blog.csdnimg.cn/20200205185152463.png" class="lazyload"></p>
+</blockquote>
+<h3 id="字体属性的简写"><a href="#字体属性的简写" class="headerlink" title="字体属性的简写"></a>字体属性的简写</h3><blockquote>
+<p><code>font</code>可以一次性同时设置多个字体的样式</p>
+<p><code>语法：</code></p>
+<p><code>font:加粗 斜体 小型大写 大小/行高 字体</code></p>
+<ul>
+<li>这里前边几个加粗、斜体和小型大写的顺 序无所谓，也可以不写，但是大小和字体 必须写且必须写到后两个。</li>
+</ul>
+</blockquote>
+<h2 id="行间距"><a href="#行间距" class="headerlink" title="行间距"></a>行间距</h2><blockquote>
+<ul>
+<li><code>line-height</code>用于设置行高，行高越大则行 间距越大。</li>
+<li><code>行间距 = line-height – font-size</code></li>
+</ul>
+</blockquote>
+<h2 id="大写化"><a href="#大写化" class="headerlink" title="大写化"></a>大写化</h2><blockquote>
+<ul>
+<li><code>text-transform</code>样式用于将元素中的字母全都变成大小。 <ul>
+<li>大写：<code>text-transform:uppercase</code></li>
+<li>小写：<code>text-tansform:lowercase</code></li>
+<li>首字母大写：<code>text-transform:capitalize</code></li>
+<li>正常：<code>text-transform:none</code></li>
+</ul>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">"text-transform:uppercase"</span>&gt;</span></span><br><span class="line">    abc</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">"text-transform:lowercase"</span>&gt;</span></span><br><span class="line">    abc</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">"text-transform:capitalize"</span>&gt;</span></span><br><span class="line">    abc</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">"text-transform:none"</span>&gt;</span></span><br><span class="line">    abc</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img alt data-src="https://img-blog.csdnimg.cn/20200205185319623.png" class="lazyload"></p>
+</blockquote>
+<h2 id="文本的修饰"><a href="#文本的修饰" class="headerlink" title="文本的修饰"></a>文本的修饰</h2><blockquote>
+<ul>
+<li><code>text-decoration</code>属性，用来给文本添加各 种修饰。通过它可以为文本的上方、下方 或者中间添加线条。 </li>
+<li>可选值：<ul>
+<li><code>underline</code>，下划线</li>
+<li><code>overline</code>，上划线</li>
+<li><code>line-through</code>，中间划线</li>
+<li><code>none</code>，无</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">"text-decoration:underline"</span>&gt;</span></span><br><span class="line">    abc</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">"text-decoration:overline "</span>&gt;</span></span><br><span class="line">    abc</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">"text-decoration:line-through"</span>&gt;</span></span><br><span class="line">    abc</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">"text-decoration:none"</span>&gt;</span></span><br><span class="line">    abc</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img alt data-src="https://img-blog.csdnimg.cn/20200205185444334.png" class="lazyload"></p>
+</blockquote>
+<h2 id="字母间距和单词间距"><a href="#字母间距和单词间距" class="headerlink" title="字母间距和单词间距"></a>字母间距和单词间距</h2><blockquote>
+<ul>
+<li><code>letter-spacing</code>用来设置字符之间的间距。 </li>
+<li><code>word-spacing</code>用来设置单词之间的间距。 </li>
+<li>这两个属性都可以直接指定一个长度或百分数作为值。正数代表的是增加距离，而 负数代表减少距离</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">"letter-spacing:10px"</span>&gt;</span></span><br><span class="line">    this is hello html;</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">"word-spacing:10px"</span>&gt;</span></span><br><span class="line">    this is hello html;</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img alt data-src="https://img-blog.csdnimg.cn/20200205185810964.png" class="lazyload"></p>
+</blockquote>
+<h2 id="对齐文本"><a href="#对齐文本" class="headerlink" title="对齐文本"></a>对齐文本</h2><blockquote>
+<p><code>text-align</code>用于设置文本的对齐方式。 </p>
+<ul>
+<li>left：左对齐</li>
+<li>right：右对齐 </li>
+<li>justify：两边对齐 </li>
+<li>center：居中对齐</li>
+</ul>
+</blockquote>
+<h2 id="首行缩进"><a href="#首行缩进" class="headerlink" title="首行缩进"></a>首行缩进</h2><blockquote>
+<p><code>text-indent</code>用来设置首行缩进。</p>
+<p><code>注意：该样式需要指定一个长度，并且只对第一 行生效。</code></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">"text-indent:2em"</span>&gt;</span></span><br><span class="line">    但那些教你制定科学自律计划表的人不会告诉你</span><br><span class="line">    他们根本就没有考虑过你的实际情况，也不会过问你能不能做到。</span><br><span class="line">    他们站在成功者的角度指导你，这，只不过是你的一种精英式的幻想。</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img alt data-src="https://img-blog.csdnimg.cn/20200205190206390.png" class="lazyload"></p>
+</blockquote>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined" target="_blank" rel="noopener">Jachie Xie</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://xjc5772.github.io/2020-02/05/%E5%AD%A6%E4%B9%A0/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E6%96%87%E6%9C%AC%E6%A0%87%E7%AD%BE/">https://xjc5772.github.io/2020-02/05/%E5%AD%A6%E4%B9%A0/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E6%96%87%E6%9C%AC%E6%A0%87%E7%AD%BE/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://xjc5772.github.io">XJC&Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/CSS/">CSS    </a><a class="post-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF/">前端    </a></div><div class="post_share"><div class="social-share" data-image="https://cdn.pixabay.com/photo/2020/01/06/18/59/poultry-4745997__340.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-button"><i class="fa fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/wechat.jpg"><div class="post-qr-code__desc">微信</div></li><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/alipay.jpg"><div class="post-qr-code__desc">支付宝</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="next-post pull-full"><a href="/2020-02/03/%E5%AD%A6%E4%B9%A0/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8/"><img class="next_cover lazyload" data-src="https://cdn.pixabay.com/photo/2020/01/16/15/09/landscape-4770872__340.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="label">下一篇</div><div class="next_info"><span>属性选择器</span></div></a></div></nav><div class="relatedPosts"><div class="relatedPosts_headline"><i class="fa fa-fw fa-thumbs-up" aria-hidden="true"></i><span> 相关推荐</span></div><div class="relatedPosts_list"><div class="relatedPosts_item"><a href="/2020-02/03/学习/前端学习/属性选择器/" title="属性选择器"><img class="relatedPosts_cover lazyload"data-src="https://cdn.pixabay.com/photo/2020/01/16/15/09/landscape-4770872__340.jpg"><div class="relatedPosts_title">属性选择器</div></a></div><div class="relatedPosts_item"><a href="/2020-02/03/学习/前端学习/伪类选择器/" title="伪类选择器"><img class="relatedPosts_cover lazyload"data-src="https://cdn.pixabay.com/photo/2020/01/16/12/15/bank-4770328__340.jpg"><div class="relatedPosts_title">伪类选择器</div></a></div><div class="relatedPosts_item"><a href="/2020-02/03/学习/前端学习/常用选择器/" title="常用选择器"><img class="relatedPosts_cover lazyload"data-src="https://cdn.pixabay.com/photo/2020/01/15/16/59/fantasy-4768428__340.jpg"><div class="relatedPosts_title">常用选择器</div></a></div></div><div class="clear_both"></div></div><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> 评论</span></div><div class="vcomment" id="vcomment"></div><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var notify = false == true ? true : false;
+var verify = false == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'zeWP3O50PgLX03nm2kuFoEjX-gzGzoHsz',
+  appKey:'EpwGoGair6vOiuEypNWRpW2V',
+  placeholder:'Please leave your footprints',
+  avatar:'monsterid',
+  guest_info:guest_info,
+  pageSize:'10',
+  lang:'en',
+  recordIP: true
+});</script></div></div></div><footer id="footer" style="background-image: url(https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture)"><div id="footer-wrap"><div class="copyright">&copy;2018 - 2020 By Jachie Xie</div><div class="framework-info"><span>驱动 </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="阅读模式"></i><i class="fa fa-plus" id="font_plus" title="放大字体"></i><i class="fa fa-minus" id="font_minus" title="缩小字体"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换" target="_self">繁</a><i class="darkmode fa fa-moon-o" id="darkmode" title="夜间模式"></i></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><a id="to_comment" href="#post-comment" title="直达评论"><i class="scroll_to_comment fa fa-comments">  </i></a><i class="fa fa-list-ul close" id="mobile-toc-button" title="目录" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  CommonHTML: {
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "HTML-CSS": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "SVG": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script async src="/js/search/local-search.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.15/dist/snackbar.min.js"></script><script src="/js/tw_cn.js"></script><script>translateInitilization()
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script><script src="/js/third-party/click_heart.js"></script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>生活雅俗共赏 | XJC&amp;Blog</title><meta name="description" content="2020年是一个充满爱的一年，在这一年。中枪中奖感觉会一样"><meta name="keywords" content="心情,随笔"><meta name="author" content="Jachie Xie"><meta name="copyright" content="Jachie Xie"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="preconnect" href="//cdn.jsdelivr.net"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="生活雅俗共赏"><meta name="twitter:description" content="2020年是一个充满爱的一年，在这一年。中枪中奖感觉会一样"><meta name="twitter:image" content="https://cdn.pixabay.com/photo/2015/06/22/08/37/children-817365_960_720.jpg"><meta property="og:type" content="article"><meta property="og:title" content="生活雅俗共赏"><meta property="og:url" content="https://xjc5772.github.io/2020-02/02/%E7%94%9F%E6%B4%BB/%E7%94%9F%E6%B4%BB%E9%9B%85%E4%BF%97%E5%85%B1%E8%B5%8F/"><meta property="og:site_name" content="XJC&amp;Blog"><meta property="og:description" content="2020年是一个充满爱的一年，在这一年。中枪中奖感觉会一样"><meta property="og:image" content="https://cdn.pixabay.com/photo/2015/06/22/08/37/children-817365_960_720.jpg"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>const autoChangeMode = 'false'
+var t = Cookies.get("theme");
+if (autoChangeMode == '1'){
+const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+const isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+const isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+if (t === undefined){
+  if (isLightMode) activateLightMode()
+  else if (isDarkMode) activateDarkMode()
+  else if (isNotSpecified || hasNoSupport){
+    console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+    now = new Date();
+    hour = now.getHours();
+    isNight = hour < 6 || hour >= 18
+    isNight ? activateDarkMode() : activateLightMode()
+}
+} else if (t == 'light') activateLightMode()
+else activateDarkMode()
+
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.15/dist/snackbar.min.css"><link rel="canonical" href="https://xjc5772.github.io/2020-02/02/%E7%94%9F%E6%B4%BB/%E7%94%9F%E6%B4%BB%E9%9B%85%E4%BF%97%E5%85%B1%E8%B5%8F/"><link rel="prev" title="内联元素与块元素" href="https://xjc5772.github.io/2020-02/03/%E5%AD%A6%E4%B9%A0/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E5%86%85%E8%81%94%E5%85%83%E7%B4%A0%E4%B8%8E%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/"><link rel="next" title="质因数分解" href="https://xjc5772.github.io/2020-02/01/%E7%AE%97%E6%B3%95/%E6%95%B0%E8%AE%BA%E9%97%AE%E9%A2%98/%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://xjc5772.github.io/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  highlight_copy: 'true',
+  highlight_lang: 'true',
+  highlight_shrink: 'false',
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    title: 'Snackbar.bookmark.title',
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  copyright: undefined,
+  copy_copyright_js: false,
+  ClickShowText: undefined,
+  medium_zoom: 'false',
+  Snackbar: {"bookmark":{"title":"Snackbar.bookmark.title","message_prev":"按","message_next":"键将本页加入书签"},"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#2d3035","position":"bottom-left"}
+  
+}</script></head><body><div id="header"> <div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">XJC&amp;Blog</a></span><i class="fa fa-bars fa-fw toggle-menu pull_right close" aria-hidden="true"></i><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 列表</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div></span><span class="pull_right" id="search_button"><a class="site-page social-icon search"><i class="fa fa-search fa-fw"></i><span> 搜索</span></a></span></div></div><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="lazyload avatar_img" src="https://i.loli.net/2019/11/19/y9F2N5EaYASTzvR.jpg" onerror="onerror=null;src='/img/friend_404.gif'"></div><div class="mobile_post_data"><div class="mobile_data_item is_center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">67</div></a></div></div><div class="mobile_data_item is_center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">43</div></a></div></div><div class="mobile_data_item is_center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">10</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 列表</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div></div><div id="mobile-sidebar-toc"><div class="toc_mobile_headline">目录</div><ol class="toc_mobile_items"><li class="toc_mobile_items-item toc_mobile_items-level-1"><a class="toc_mobile_items-link" href="#雅"><span class="toc_mobile_items-number">1.</span> <span class="toc_mobile_items-text">雅</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#漫漫高速路"><span class="toc_mobile_items-number">1.1.</span> <span class="toc_mobile_items-text">漫漫高速路</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#有时候只需要一个温暖"><span class="toc_mobile_items-number">1.2.</span> <span class="toc_mobile_items-text">有时候只需要一个温暖</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#黑夜里更加感性"><span class="toc_mobile_items-number">1.3.</span> <span class="toc_mobile_items-text">黑夜里更加感性</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#打破枷锁"><span class="toc_mobile_items-number">1.4.</span> <span class="toc_mobile_items-text">打破枷锁</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#So-Relax"><span class="toc_mobile_items-number">1.5.</span> <span class="toc_mobile_items-text">So Relax</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#未完…"><span class="toc_mobile_items-number">1.6.</span> <span class="toc_mobile_items-text">未完…</span></a></li></ol></li></ol></div></div><div id="body-wrap"><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true">     </i><div class="auto_open" id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#雅"><span class="toc-number">1.</span> <span class="toc-text">雅</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#漫漫高速路"><span class="toc-number">1.1.</span> <span class="toc-text">漫漫高速路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#有时候只需要一个温暖"><span class="toc-number">1.2.</span> <span class="toc-text">有时候只需要一个温暖</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#黑夜里更加感性"><span class="toc-number">1.3.</span> <span class="toc-text">黑夜里更加感性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#打破枷锁"><span class="toc-number">1.4.</span> <span class="toc-text">打破枷锁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#So-Relax"><span class="toc-number">1.5.</span> <span class="toc-text">So Relax</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#未完…"><span class="toc-number">1.6.</span> <span class="toc-text">未完…</span></a></li></ol></li></ol></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture)"><div id="post-info"><div id="post-title"><div class="posttitle">生活雅俗共赏</div></div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 发表于 2020-02-02<span class="post-meta__separator">|</span><i class="fa fa-history" aria-hidden="true"></i> 更新于 2020-02-06</time><span class="post-meta__separator mobile_hidden">|</span><span class="mobile_hidden"><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a></span><div class="post-meta-wordcount"><i class="fa fa-file-word-o post-meta__icon" aria-hidden="true"></i><span>字数总计: </span><span class="word-count">2.4k</span><span class="post-meta__separator">|</span><i class="fa fa-clock-o post-meta__icon" aria-hidden="true"></i><span>阅读时长: 7 分钟</span><span class="post-meta__separator">|</span><i class="fa fa-eye post-meta__icon" aria-hidden="true">       </i><span>阅读量: </span><span id="busuanzi_value_page_pv"></span></div></div></div></div><div class="layout layout_post" id="content-inner">   <article id="post"><div class="article-container" id="post-content"><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="298" height="52" src="//music.163.com/outchain/player?type=2&id=411214279&auto=1&height=32"></iframe></p>
+<blockquote>
+<p>&emsp;&emsp;这个年其实过得并不是很舒服，并不是因为没有年味，并不是因为疫情限制了出行。</p>
+</blockquote>
+<p>人们常说，<code>在人生的道路上，最好的办法是向前看，别回头</code>。</p>
+<p><img alt="往事别回头" data-src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1580664506249&amp;di=608c8a4f62e8630535a2866a48ba55c5&amp;imgtype=0&amp;src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20170331%2F77bc71670fcd4d9285fa806f9ba5409f_th.jpg" class="lazyload"></p>
+<blockquote>
+<p>&emsp;&emsp;而我也不知为何，望了望从前。看了从前的自己，对比了如今。最近朋友圈里很多爆出两年前、高中的照片，可能也是在家确实无聊到爆了或者想缅怀一下过去，这些都不重要，反正我也没有参与。不过这里我就自爆下高中的高中的照片</p>
+<p><img alt="与高中室友的照片" data-src="https://img-blog.csdnimg.cn/20200206142444748.png" class="lazyload"></p>
+<p>对，对，我是缅怀过去的……</p>
+</blockquote>
+<h1 id="雅"><a href="#雅" class="headerlink" title="雅"></a>雅</h1><blockquote>
+<p>&emsp;&emsp;在过去的时间里，溜走了太多的可能，而那溜走的很有可能就不可能了。</p>
+</blockquote>
+<h2 id="漫漫高速路"><a href="#漫漫高速路" class="headerlink" title="漫漫高速路"></a>漫漫高速路</h2><blockquote>
+<p>&emsp;&emsp;我们都好像在高速路上行驶的汽车，有快也有慢。</p>
+<p>&emsp;&emsp;我曾经把人生想作高速路，每个人都是一辆车子在这条看似“无止境”的道路上行驶，这一路上，有遇到太多的人，也有太多一刹那就错过的车。每个人都有义无反顾攒足了劲儿，油门踩到底的冲劲儿，那为了超越前车的执着，为了一个目的地的日夜奔波。</p>
+<p>&emsp;&emsp;我曾经很天真的以为，只要我定好一个方向，然后我朝着这个方向，我竭尽全力，勇敢去奔，去冲，那么换来的就是胜利:trophy:，事实不然。当做了好长一段时间后，才发现，原来那个目标，那个方向依旧那么远，我觉得很失败，我觉得气馁，原来没有那么多的公平，原来插上了翅膀，也不一定能够飞得起来。</p>
+<p><img alt data-src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1299285695,488463908&amp;fm=26&amp;gp=0.jpg" class="lazyload"></p>
+<p>&emsp;&emsp;不过很幸运，我收获的一双翅膀，兴许我并没有飞到目的地，但我感觉走过来的路变的轻松，它不再泥泞，不再坎坷，我现在可以笑着谈以往的辛酸，那不好的话我可以当做一场玩笑。没有人让你不开心，终究只有那自己。也没有人有义务让你开心，还是只有自己。</p>
+<p>&emsp;&emsp;这条路我想指定还有很长很长，我要遇到的车还有好多好多，我要错过的也不会很少，努力更换自己的零部件，乐观的心，生活没有彩排，每时每刻都是现场直播，有太多的随机数字等着出现，有太多的英文字母难以串成串，太多的黑夜无人入眠，这不是上天的安排，这是生活的剧本，一场直播的剧本，每一天都要全力以赴。</p>
+<p><img alt data-src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1580825927930&amp;di=0f7dffd2c0180e39c0a1e8f1b66199f0&amp;imgtype=jpg&amp;src=http%3A%2F%2Fimg3.imgtn.bdimg.com%2Fit%2Fu%3D2081029088%2C2523289133%26fm%3D214%26gp%3D0.jpg" class="lazyload"></p>
+</blockquote>
+<h2 id="有时候只需要一个温暖"><a href="#有时候只需要一个温暖" class="headerlink" title="有时候只需要一个温暖"></a>有时候只需要一个温暖</h2><blockquote>
+<p>&emsp;&emsp;有时候只需要一个温暖的笑容，就像拥有了整个世界。</p>
+<p><img alt data-src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3856800581,2442918240&amp;fm=26&amp;gp=0.jpg" class="lazyload"></p>
+<p>&emsp;&emsp;19年的8月，从前的一个朋友在外工作后回来，因为工作与自己想法的不同，他决定回来后重新开始，就这样他一个人投简历，一个人找工作，一个人看住所，在这个谜一样的社会，作为一个初来乍到的小白，有时候还真替捏把汗，事实证明，这一切并不顺利，找了一个工作在东边，而住处在西边:cry:，每天9点上班，7点就要起床，这个冬天的早晨格外冷。</p>
+<p>&emsp;&emsp;后来有一次晚上，我到他那儿去，我到他那儿地铁站差不多接近8点了，等了一会儿，他从另一个方向的出口出来。仍旧背着高中那时候的书包（那是见他高中就背的包了，有一次需要还借来背了一下），可能是疲惫，他并没有特别有精气神，出来后，见到我笑了一下，因为他很瘦，嘴角上翘，眼角的皮皱得很厉害。我俩都没有吃饭，我说想吃泡面，我俩在他租住的小区楼下超市买了两桶泡面，<code>Big</code>桶的那种。</p>
+<p><img alt data-src="https://img-blog.csdnimg.cn/20200204194504922.jpg" class="lazyload"></p>
+<p>&emsp;&emsp;回到家看着他回到家熟练的放下包，烧水泡面，拖拉凳子，打包垃圾袋，我想他一定已经适应了，看着堆满东西的桌子。床上单薄的被子，我建议他可以买一床毛毯，他说有时间蹲个便宜点的车，我笑了，我说行，有时间帮你看看。</p>
+<p>&emsp;&emsp;晚上的时候，我与他聊了许多，从前与他聊天，我只会把他当一个还不成熟的小孩儿看待，在外工作半年，他身上的稚气明显减少了许多，和他聊天当中，许多以前从他口中不可能提到的东西，他也会有去提到，有时候我的一句长叹，他还会跟我说，看开点，别叹气:joy:，那天的确挺多不开心的，晚上睡觉的时候，我发现他晚上放着舒缓的纯音乐钢琴曲，我以往失眠的时候，也时长在枕边放着这样的曲子，将声音调得很小，就这样悄悄得睡着。我很明白他有时候太压抑，导致他需要这样的方式才能入眠，我心里也不由感到抱歉，带来了负面情绪，也打搅了他。</p>
+<p>&emsp;&emsp;早晨醒来后，因为有课，我也得早早赶回去，坐地铁的时候，我发现赶地铁的人，都行色匆匆，左手里的面包还没有啃完，忙着去挤地铁，我回学校的方向几乎没有人，而反方向的人与车，都那样的拥挤。</p>
+<p>&emsp;&emsp;那一刻，我很想反问自己，我在做什么，我为什么这样做，自己所树立的烦恼仅仅是自己给自己出的一道难题，没有人能惹得你不开心，也没有人有义务去讨得你欢喜。反观身后，是如何去适应这样的生活与调整初出社会的心态，昨儿和朋友一块儿相处的短时间，我有很深刻体会，长时间这样，他很压抑，情绪很低落，尽管下班那么晚，很容易就获得的与好友一块儿吃的桶泡面的满足感，一桶不够，大食桶来凑的喜悦，看似简单平凡，可我明白，在这个陌生的城市，他更需要的是陪伴，需要朋友与他讲话，需要那一个温暖。</p>
+<p><img alt data-src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1580967266748&amp;di=8d9d25415171cd73dfe7f929cbb02b31&amp;imgtype=jpg&amp;src=http%3A%2F%2Fimg3.imgtn.bdimg.com%2Fit%2Fu%3D1985928088%2C3133898211%26fm%3D214%26gp%3D0.jpg" class="lazyload"></p>
+<p>&emsp;&emsp;自己身处在学校，都说大学是一个小社会， 但这个小社会兴许教会了我们许多， 它同样带来的诱惑与迷惑也很多。看过一句话，”过去不代表未来。过去决定了现在，但是决定不了未来，未来会怎么样，靠今天来争取“。现在的样子由当初的模样决定，有时候也会时常迷惘，将一些不必要的琐事儿拿来烦及于身，有时候很就好像是一只温水里的青蛙，而这”温泉“越泡越让人迷失。</p>
+</blockquote>
+<h2 id="黑夜里更加感性"><a href="#黑夜里更加感性" class="headerlink" title="黑夜里更加感性"></a>黑夜里更加感性</h2><blockquote>
+<p>&emsp;&emsp;人到了晚上都是感性的动物，会想很多事，而且多半是痛苦的，这种情绪控制不住，轻轻一碰就痛。不要因为一点瑕疵而放弃一段坚持，没有人是完美的，耐心点，坚强点，生活从来不会刻意亏欠谁，总有一天，你受的苦将照亮你前进的路。</p>
+<p><img alt data-src="https://img-blog.csdnimg.cn/20200206205057212.png" class="lazyload"></p>
+<p>&emsp;&emsp;这是在我手机备忘录里住得很久的一句话。</p>
+<p>&emsp;&emsp;从前我在夜里尝试过失眠，尝试过哭泣，尝试过在无人的街道里竞走，也尝试过蹲在马路牙子的屋檐下躲雨，像极了青春偶像剧里的的情节画面。曾多少次将无数个黑夜误会成了一场终结，可熟不知是它抚慰着疲惫。</p>
+</blockquote>
+<h2 id="打破枷锁"><a href="#打破枷锁" class="headerlink" title="打破枷锁"></a>打破枷锁</h2><blockquote>
+<p>&emsp;&emsp;唯有冲破了枷锁的束缚，才会得到自己的幸福。</p>
+<p><img alt data-src="https://img-blog.csdnimg.cn/2020020614270332.png" class="lazyload"></p>
+<p>&emsp;&emsp;<code>日出到日落，潮来又潮去，风吹后风停，一切平静如初。</code></p>
+</blockquote>
+<h2 id="So-Relax"><a href="#So-Relax" class="headerlink" title="So Relax"></a>So Relax</h2><blockquote>
+<p>喜欢一首很火的一首小诗🍒</p>
+<p>纽约时间比加州时间早三个小时，<br>New York is 3 hours ahead of California,</p>
+<p>但加州时间并没有变慢。<br>but it does not make California slow.</p>
+<p>有人22岁就毕业了，<br>Someone graduated at the age of 22,</p>
+<p>但等了五年才找到好的工作！<br>but waited 5 years before securing a good job!</p>
+<p>有人25岁就当上CEO，<br>Someone became a CEO at 25,</p>
+<p>却在50岁去世。<br>and died at 50.</p>
+<p>也有人迟到50岁才当上CEO，<br>While another became a CEO at 50,</p>
+<p>然后活到90岁。<br>and lived to 90 years.</p>
+<p>有人依然单身，<br>Someone is still single,</p>
+<p>同时也有人已婚。<br>while someone else got married.</p>
+<p>奥巴马55岁就退休，<br>Obama retires at 55,</p>
+<p>川普70岁才开始当总统。<br>but Trump starts at 70.</p>
+<p>世上每个人本来就有自己的发展时区。<br>Absolutely everyone in this world works based on their Time Zone.</p>
+<p>身边有些人看似走在你前面，<br>People around you might seem to go ahead of you,</p>
+<p>也有人看似走在你后面。<br>some might seem to be behind you.</p>
+<p>但其实每个人在自己的时区有自己的步程。<br>But everyone is running their own RACE, in their own TIME.</p>
+<p>不用嫉妒或嘲笑他们。<br>Don’t envy them or mock them.</p>
+<p>他们都在自己的时区里，你也是！<br>They are in their TIME ZONE, and you are in yours!</p>
+<p>生命就是等待正确的行动时机。<br>Life is about waiting for the right moment to act.</p>
+<p>所以，放轻松<br>So Relax</p>
+</blockquote>
+<h2 id="未完…"><a href="#未完…" class="headerlink" title="未完…"></a>未完…</h2></div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined" target="_blank" rel="noopener">Jachie Xie</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://xjc5772.github.io/2020-02/02/%E7%94%9F%E6%B4%BB/%E7%94%9F%E6%B4%BB%E9%9B%85%E4%BF%97%E5%85%B1%E8%B5%8F/">https://xjc5772.github.io/2020-02/02/%E7%94%9F%E6%B4%BB/%E7%94%9F%E6%B4%BB%E9%9B%85%E4%BF%97%E5%85%B1%E8%B5%8F/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://xjc5772.github.io">XJC&Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%BF%83%E6%83%85/">心情    </a><a class="post-meta__tags" href="/tags/%E9%9A%8F%E7%AC%94/">随笔    </a></div><div class="post_share"><div class="social-share" data-image="https://cdn.pixabay.com/photo/2015/06/22/08/37/children-817365_960_720.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-button"><i class="fa fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/wechat.jpg"><div class="post-qr-code__desc">微信</div></li><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/alipay.jpg"><div class="post-qr-code__desc">支付宝</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="prev-post pull_left"><a href="/2020-02/03/%E5%AD%A6%E4%B9%A0/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E5%86%85%E8%81%94%E5%85%83%E7%B4%A0%E4%B8%8E%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/"><img class="prev_cover lazyload" data-src="https://cdn.pixabay.com/photo/2020/01/17/16/31/coot-4773355__340.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="label">上一篇</div><div class="prev_info"><span>内联元素与块元素</span></div></a></div><div class="next-post pull_right"><a href="/2020-02/01/%E7%AE%97%E6%B3%95/%E6%95%B0%E8%AE%BA%E9%97%AE%E9%A2%98/%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3/"><img class="next_cover lazyload" data-src="https://cdn.pixabay.com/photo/2020/01/17/23/42/ducks-4774234__340.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="label">下一篇</div><div class="next_info"><span>质因数分解</span></div></a></div></nav><div class="relatedPosts"><div class="relatedPosts_headline"><i class="fa fa-fw fa-thumbs-up" aria-hidden="true"></i><span> 相关推荐</span></div><div class="relatedPosts_list"><div class="relatedPosts_item"><a href="/2020-01/06/生活/小寒未初逢寒/" title="小寒初逢寒"><img class="relatedPosts_cover lazyload"data-src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1578315385544&di=f1d968ea751aed6ec08eeec8c91c0ac3&imgtype=0&src=http%3A%2F%2Fimg.pconline.com.cn%2Fimages%2Fupload%2Fupc%2Ftx%2Fphotoblog%2F1501%2F07%2Fc3%2F1585824_1420615831378.jpg"><div class="relatedPosts_title">小寒初逢寒</div></a></div></div><div class="clear_both"></div></div><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> 评论</span></div><div class="vcomment" id="vcomment"></div><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var notify = false == true ? true : false;
+var verify = false == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'zeWP3O50PgLX03nm2kuFoEjX-gzGzoHsz',
+  appKey:'EpwGoGair6vOiuEypNWRpW2V',
+  placeholder:'Please leave your footprints',
+  avatar:'monsterid',
+  guest_info:guest_info,
+  pageSize:'10',
+  lang:'en',
+  recordIP: true
+});</script></div></div></div><footer id="footer" style="background-image: url(https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture)"><div id="footer-wrap"><div class="copyright">&copy;2018 - 2020 By Jachie Xie</div><div class="framework-info"><span>驱动 </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="阅读模式"></i><i class="fa fa-plus" id="font_plus" title="放大字体"></i><i class="fa fa-minus" id="font_minus" title="缩小字体"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换" target="_self">繁</a><i class="darkmode fa fa-moon-o" id="darkmode" title="夜间模式"></i></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><a id="to_comment" href="#post-comment" title="直达评论"><i class="scroll_to_comment fa fa-comments">  </i></a><i class="fa fa-list-ul close" id="mobile-toc-button" title="目录" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  CommonHTML: {
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "HTML-CSS": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "SVG": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script async src="/js/search/local-search.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.15/dist/snackbar.min.js"></script><script src="/js/tw_cn.js"></script><script>translateInitilization()
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script><script src="/js/third-party/click_heart.js"></script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>
